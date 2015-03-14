@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF89A0F41AB3EDDA00138C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F31AB3EDDA00138C66 /* main.m */; };
+		AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */; };
+		AF89A0FA1AB3EDDA00138C66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F91AB3EDDA00138C66 /* ViewController.m */; };
+		AF89A0FD1AB3EDDA00138C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89A0FB1AB3EDDA00138C66 /* Main.storyboard */; };
+		AF89A0FF1AB3EDDA00138C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */; };
+		AF89A1021AB3EDDA00138C66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */; };
+		AF89A10E1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A10D1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF89A1081AB3EDDB00138C66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF89A0E61AB3EDDA00138C66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF89A0ED1AB3EDDA00138C66;
+			remoteInfo = "Game Show Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF89A0EE1AB3EDDA00138C66 /* Game Show Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Show Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF89A0F21AB3EDDA00138C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF89A0F31AB3EDDA00138C66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF89A0F81AB3EDDA00138C66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF89A0F91AB3EDDA00138C66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF89A0FC1AB3EDDA00138C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AF89A1011AB3EDDA00138C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AF89A1071AB3EDDB00138C66 /* Game Show ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game Show ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF89A10C1AB3EDDB00138C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF89A10D1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game_Show_ChallengeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF89A0EB1AB3EDDA00138C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89A1041AB3EDDB00138C66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF89A0E51AB3EDDA00138C66 = {
+			isa = PBXGroup;
+			children = (
+				AF89A0F01AB3EDDA00138C66 /* Game Show Challenge */,
+				AF89A10A1AB3EDDB00138C66 /* Game Show ChallengeTests */,
+				AF89A0EF1AB3EDDA00138C66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF89A0EF1AB3EDDA00138C66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF89A0EE1AB3EDDA00138C66 /* Game Show Challenge.app */,
+				AF89A1071AB3EDDB00138C66 /* Game Show ChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF89A0F01AB3EDDA00138C66 /* Game Show Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */,
+				AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */,
+				AF89A0F81AB3EDDA00138C66 /* ViewController.h */,
+				AF89A0F91AB3EDDA00138C66 /* ViewController.m */,
+				AF89A0FB1AB3EDDA00138C66 /* Main.storyboard */,
+				AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */,
+				AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */,
+				AF89A0F11AB3EDDA00138C66 /* Supporting Files */,
+			);
+			path = "Game Show Challenge";
+			sourceTree = "<group>";
+		};
+		AF89A0F11AB3EDDA00138C66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF89A0F21AB3EDDA00138C66 /* Info.plist */,
+				AF89A0F31AB3EDDA00138C66 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF89A10A1AB3EDDB00138C66 /* Game Show ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF89A10D1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m */,
+				AF89A10B1AB3EDDB00138C66 /* Supporting Files */,
+			);
+			path = "Game Show ChallengeTests";
+			sourceTree = "<group>";
+		};
+		AF89A10B1AB3EDDB00138C66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF89A10C1AB3EDDB00138C66 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF89A0ED1AB3EDDA00138C66 /* Game Show Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF89A1111AB3EDDB00138C66 /* Build configuration list for PBXNativeTarget "Game Show Challenge" */;
+			buildPhases = (
+				AF89A0EA1AB3EDDA00138C66 /* Sources */,
+				AF89A0EB1AB3EDDA00138C66 /* Frameworks */,
+				AF89A0EC1AB3EDDA00138C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Game Show Challenge";
+			productName = "Game Show Challenge";
+			productReference = AF89A0EE1AB3EDDA00138C66 /* Game Show Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF89A1061AB3EDDB00138C66 /* Game Show ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF89A1141AB3EDDB00138C66 /* Build configuration list for PBXNativeTarget "Game Show ChallengeTests" */;
+			buildPhases = (
+				AF89A1031AB3EDDB00138C66 /* Sources */,
+				AF89A1041AB3EDDB00138C66 /* Frameworks */,
+				AF89A1051AB3EDDB00138C66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF89A1091AB3EDDB00138C66 /* PBXTargetDependency */,
+			);
+			name = "Game Show ChallengeTests";
+			productName = "Game Show ChallengeTests";
+			productReference = AF89A1071AB3EDDB00138C66 /* Game Show ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF89A0E61AB3EDDA00138C66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Friends of Hektor";
+				TargetAttributes = {
+					AF89A0ED1AB3EDDA00138C66 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					AF89A1061AB3EDDB00138C66 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = AF89A0ED1AB3EDDA00138C66;
+					};
+				};
+			};
+			buildConfigurationList = AF89A0E91AB3EDDA00138C66 /* Build configuration list for PBXProject "Game Show Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF89A0E51AB3EDDA00138C66;
+			productRefGroup = AF89A0EF1AB3EDDA00138C66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF89A0ED1AB3EDDA00138C66 /* Game Show Challenge */,
+				AF89A1061AB3EDDB00138C66 /* Game Show ChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF89A0EC1AB3EDDA00138C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF89A0FD1AB3EDDA00138C66 /* Main.storyboard in Resources */,
+				AF89A1021AB3EDDA00138C66 /* LaunchScreen.xib in Resources */,
+				AF89A0FF1AB3EDDA00138C66 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89A1051AB3EDDB00138C66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF89A0EA1AB3EDDA00138C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF89A0FA1AB3EDDA00138C66 /* ViewController.m in Sources */,
+				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
+				AF89A0F41AB3EDDA00138C66 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF89A1031AB3EDDB00138C66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF89A10E1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF89A1091AB3EDDB00138C66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF89A0ED1AB3EDDA00138C66 /* Game Show Challenge */;
+			targetProxy = AF89A1081AB3EDDB00138C66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF89A0FB1AB3EDDA00138C66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF89A0FC1AB3EDDA00138C66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF89A1011AB3EDDA00138C66 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF89A10F1AB3EDDB00138C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF89A1101AB3EDDB00138C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF89A1121AB3EDDB00138C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Game Show Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AF89A1131AB3EDDB00138C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Game Show Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AF89A1151AB3EDDB00138C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Game Show ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game Show Challenge.app/Game Show Challenge";
+			};
+			name = Debug;
+		};
+		AF89A1161AB3EDDB00138C66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Game Show ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game Show Challenge.app/Game Show Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF89A0E91AB3EDDA00138C66 /* Build configuration list for PBXProject "Game Show Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF89A10F1AB3EDDB00138C66 /* Debug */,
+				AF89A1101AB3EDDB00138C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF89A1111AB3EDDB00138C66 /* Build configuration list for PBXNativeTarget "Game Show Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF89A1121AB3EDDB00138C66 /* Debug */,
+				AF89A1131AB3EDDB00138C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF89A1141AB3EDDB00138C66 /* Build configuration list for PBXNativeTarget "Game Show ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF89A1151AB3EDDB00138C66 /* Debug */,
+				AF89A1161AB3EDDB00138C66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF89A0E61AB3EDDA00138C66 /* Project object */;
+}
