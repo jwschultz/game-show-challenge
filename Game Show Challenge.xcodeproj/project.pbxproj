@@ -81,6 +81,7 @@
 		AF89A0F01AB3EDDA00138C66 /* Game Show Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AF89A1171AB3EEB100138C66 /* Model */,
 				AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */,
 				AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */,
 				AF89A0F81AB3EDDA00138C66 /* ViewController.h */,
@@ -117,6 +118,13 @@
 				AF89A10C1AB3EDDB00138C66 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF89A1171AB3EEB100138C66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
