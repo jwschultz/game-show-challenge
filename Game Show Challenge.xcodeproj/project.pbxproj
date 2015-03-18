@@ -14,6 +14,7 @@
 		AF89A0FF1AB3EDDA00138C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */; };
 		AF89A1021AB3EDDA00138C66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */; };
 		AF89A10E1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A10D1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m */; };
+		AFB9A7FE1AB91EC20035AB9C /* korinnabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AF89A1071AB3EDDB00138C66 /* Game Show ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game Show ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89A10C1AB3EDDB00138C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF89A10D1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game_Show_ChallengeTests.m; sourceTree = "<group>"; };
+		AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = korinnabold.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		AF89A0F11AB3EDDA00138C66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */,
 				AF89A0F21AB3EDDA00138C66 /* Info.plist */,
 				AF89A0F31AB3EDDA00138C66 /* main.m */,
 			);
@@ -209,6 +212,7 @@
 			files = (
 				AF89A0FD1AB3EDDA00138C66 /* Main.storyboard in Resources */,
 				AF89A1021AB3EDDA00138C66 /* LaunchScreen.xib in Resources */,
+				AFB9A7FE1AB91EC20035AB9C /* korinnabold.ttf in Resources */,
 				AF89A0FF1AB3EDDA00138C66 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +426,7 @@
 				AF89A1131AB3EDDB00138C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF89A1141AB3EDDB00138C66 /* Build configuration list for PBXNativeTarget "Game Show ChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				AF89A1161AB3EDDB00138C66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
