@@ -10,13 +10,15 @@
             <string>KorinnaBold</string>
             <string>KorinnaBold</string>
             <string>KorinnaBold</string>
+            <string>KorinnaBold</string>
+            <string>KorinnaBold</string>
         </mutableArray>
     </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="aSo-A6-Z3g">
             <objects>
-                <viewController id="yPE-07-An1" sceneMemberID="viewController">
+                <viewController id="yPE-07-An1" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="202-3P-yEi"/>
                         <viewControllerLayoutGuide type="bottom" id="B36-eU-FTd"/>
@@ -32,6 +34,7 @@
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-J1-y4e">
                                 <rect key="frame" x="180" y="552" width="241" height="29"/>
+                                <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="p0e-1x-4yA"/>
                                 </constraints>
@@ -39,6 +42,7 @@
                                     <segment title="Jeopardy!"/>
                                     <segment title="Double Jeopardy!"/>
                                 </segments>
+                                <color key="tintColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-35-UtG">
                                 <rect key="frame" x="0.0" y="58" width="600" height="75"/>
@@ -48,6 +52,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="fab-lX-d0u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51N-Dg-geE">
                                 <rect key="frame" x="0.0" y="141" width="600" height="75"/>
@@ -87,19 +94,28 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktI-XR-TlR">
                                 <rect key="frame" x="0.0" y="473" width="303" height="40"/>
+                                <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DYf-IS-nnt"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="Correct">
+                                    <color key="titleColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="markAnswerCorrect" destination="yPE-07-An1" eventType="touchUpInside" id="WIh-uV-3sN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkN-Qq-2eI">
                                 <rect key="frame" x="297" y="473" width="303" height="40"/>
+                                <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IeD-Nz-qn8"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="Nope">
+                                    <color key="titleColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -146,6 +162,9 @@
                             <constraint firstItem="xpm-35-UtG" firstAttribute="height" secondItem="JdP-rh-LN8" secondAttribute="height" id="zWX-zB-31K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="clueValues" destination="xpm-35-UtG" id="Ugm-SQ-7dH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSp-H4-L2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

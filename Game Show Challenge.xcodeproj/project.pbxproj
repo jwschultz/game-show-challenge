@@ -42,6 +42,8 @@
 		AF89A10C1AB3EDDB00138C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF89A10D1AB3EDDB00138C66 /* Game_Show_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game_Show_ChallengeTests.m; sourceTree = "<group>"; };
 		AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = korinnabold.ttf; sourceTree = "<group>"; };
+		AFE64C881ABA6E5B0070BCA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/JeopardyGame.h; sourceTree = "<group>"; };
+		AFE64C8A1ABA6E5B0070BCA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/JeopardyGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,8 @@
 		AF89A1171AB3EEB100138C66 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFE64C871ABA6E5B0070BCA9 /* JeopardyGame.h */,
+				AFE64C891ABA6E5B0070BCA9 /* JeopardyGame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -270,6 +274,22 @@
 				AF89A1011AB3EDDA00138C66 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		AFE64C871ABA6E5B0070BCA9 /* JeopardyGame.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE64C881ABA6E5B0070BCA9 /* Base */,
+			);
+			name = JeopardyGame.h;
+			sourceTree = "<group>";
+		};
+		AFE64C891ABA6E5B0070BCA9 /* JeopardyGame.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFE64C8A1ABA6E5B0070BCA9 /* Base */,
+			);
+			name = JeopardyGame.m;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
