@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *playerScore;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *clueValues;
 
 

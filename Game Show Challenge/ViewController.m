@@ -22,6 +22,8 @@ static GameShowGame *jeopardyGame;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     jeopardyGame = [[GameShowGame alloc] init];
+    jeopardyGame.playerScore = 0;
+    self.playerScore.text = @"0";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,11 +33,12 @@ static GameShowGame *jeopardyGame;
 
 
 - (IBAction)setNextValue:(UIButton *)sender {
-    jeopardyGame.nextValue = atoi([sender.titleLabel.text cString]);
+    jeopardyGame.nextValue = [sender.titleLabel.text intValue];
 }
 
 - (IBAction)markAnswerCorrect {
     jeopardyGame.playerScore += jeopardyGame.nextValue;
+    [self.playerScore setText:[@(jeopardyGame.playerScore) stringValue]];
 }
 
 @end

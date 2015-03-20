@@ -166,6 +166,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playerScore" destination="lyW-gz-ew5" id="Ksn-JM-5s9"/>
                         <outletCollection property="clueValues" destination="xpm-35-UtG" id="Ugm-SQ-7dH"/>
                     </connections>
                 </viewController>
