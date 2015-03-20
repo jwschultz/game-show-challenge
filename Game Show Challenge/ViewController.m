@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "JeopardyGame.h"
+#import "GameShowGame.h"
 
 @interface ViewController ()
 
@@ -15,11 +15,13 @@
 
 @implementation ViewController
 
+static GameShowGame *jeopardyGame;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    self.jeopardyGame = [[JeopardyGame alloc] init];
+    jeopardyGame = [[GameShowGame alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,11 +31,11 @@
 
 
 - (IBAction)setNextValue:(UIButton *)sender {
-    self.jeopardyGame.nextValue = atoi([sender.titleLabel.text cString]);
+    jeopardyGame.nextValue = atoi([sender.titleLabel.text cString]);
 }
 
 - (IBAction)markAnswerCorrect {
-    self.jeopardyGame.playerScore += self.jeopardyGame.nextValue;
+    jeopardyGame.playerScore += jeopardyGame.nextValue;
 }
 
 @end

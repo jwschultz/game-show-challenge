@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class JeopardyGame;
 
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *clueValues;
-@property (strong, nonatomic) JeopardyGame *jeopardyGame;
+
 
 @end
 

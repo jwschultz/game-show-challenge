@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A2C94567-9DED-48DA-87FA-304F226AD44D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Game Show Challenge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</key>
+		<string>github.com:jwschultz/game-show-challenge.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Game Show Challenge.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jwschultz/game-show-challenge.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Game%20Show%20Challenge</string>
+		</dict>
+	</array>
+</dict>
+</plist>
