@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yPE-07-An1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="korinnabold.ttf">
@@ -27,11 +28,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-gz-ew5">
-                                <rect key="frame" x="24" y="20" width="552" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-J1-y4e">
                                 <rect key="frame" x="180" y="552" width="241" height="29"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,7 +44,7 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-35-UtG">
-                                <rect key="frame" x="0.0" y="58" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="105" width="600" height="65.5"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="200">
@@ -60,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51N-Dg-geE">
-                                <rect key="frame" x="0.0" y="141" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="179" width="600" height="65.5"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="400">
@@ -72,7 +68,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="600" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-Ye-As9">
-                                <rect key="frame" x="0.0" y="224" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="252" width="600" height="65.5"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="600">
@@ -84,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="800" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-rh-LN8">
-                                <rect key="frame" x="0.0" y="307" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="326" width="600" height="65.5"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="800">
@@ -96,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-wz-qFj">
-                                <rect key="frame" x="0.0" y="390" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="399" width="600" height="65.5"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
                                 <state key="normal" title="1000">
@@ -137,14 +133,27 @@
                                     <action selector="markAnswerIncorrect" destination="yPE-07-An1" eventType="touchUpInside" id="dnM-px-hEf"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$8,400" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-gz-ew5">
+                                <rect key="frame" x="150" y="20" width="300" height="65.5"/>
+                                <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="wTH-Fi-gwN"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JwJ-Ye-As9" secondAttribute="trailing" id="2Iw-ae-0wv"/>
+                            <constraint firstItem="lyW-gz-ew5" firstAttribute="leading" secondItem="Yv2-qQ-Qo1" secondAttribute="leadingMargin" constant="8" id="33m-by-jKB"/>
                             <constraint firstAttribute="trailing" secondItem="51N-Dg-geE" secondAttribute="trailing" id="63V-lU-Mm1"/>
                             <constraint firstItem="JdP-rh-LN8" firstAttribute="leading" secondItem="Yv2-qQ-Qo1" secondAttribute="leading" id="8CP-ty-B2q"/>
                             <constraint firstItem="xpm-35-UtG" firstAttribute="height" secondItem="MhY-wz-qFj" secondAttribute="height" id="9U7-dT-BCR"/>
+                            <constraint firstAttribute="centerY" secondItem="lyW-gz-ew5" secondAttribute="centerY" constant="247.25" id="9up-6y-x5U"/>
                             <constraint firstAttribute="trailing" secondItem="JwJ-Ye-As9" secondAttribute="trailing" id="ESc-CY-XWY"/>
+                            <constraint firstAttribute="centerX" secondItem="lyW-gz-ew5" secondAttribute="centerX" id="Eqd-S0-V3S"/>
                             <constraint firstAttribute="trailing" secondItem="MhY-wz-qFj" secondAttribute="trailing" id="FlW-Zj-xsa"/>
                             <constraint firstItem="ktI-XR-TlR" firstAttribute="top" secondItem="MhY-wz-qFj" secondAttribute="bottom" constant="8" id="G7p-df-I5Z"/>
                             <constraint firstAttribute="trailing" secondItem="JdP-rh-LN8" secondAttribute="trailing" id="G9D-IG-aa5"/>
@@ -160,15 +169,21 @@
                             <constraint firstAttribute="trailing" secondItem="MhY-wz-qFj" secondAttribute="trailing" id="PlN-Zo-HCD"/>
                             <constraint firstItem="2Zm-J1-y4e" firstAttribute="top" secondItem="ktI-XR-TlR" secondAttribute="bottom" constant="39" id="Sdf-Pp-HtM"/>
                             <constraint firstItem="51N-Dg-geE" firstAttribute="leading" secondItem="Yv2-qQ-Qo1" secondAttribute="leading" id="TBt-Qo-tol"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lyW-gz-ew5" secondAttribute="trailing" constant="134" id="THU-qL-RdZ"/>
+                            <constraint firstItem="lyW-gz-ew5" firstAttribute="leading" secondItem="Yv2-qQ-Qo1" secondAttribute="leadingMargin" constant="134" id="X6r-bO-TaF"/>
+                            <constraint firstItem="xpm-35-UtG" firstAttribute="top" secondItem="lyW-gz-ew5" secondAttribute="bottom" constant="20" id="YZq-P0-h4x"/>
                             <constraint firstItem="SkN-Qq-2eI" firstAttribute="width" secondItem="ktI-XR-TlR" secondAttribute="width" id="d3W-3a-mjv"/>
                             <constraint firstItem="JwJ-Ye-As9" firstAttribute="leading" secondItem="Yv2-qQ-Qo1" secondAttribute="leading" id="dL3-sm-sGG"/>
                             <constraint firstItem="51N-Dg-geE" firstAttribute="top" secondItem="xpm-35-UtG" secondAttribute="bottom" constant="8" id="dwq-Jp-4hD"/>
                             <constraint firstItem="MhY-wz-qFj" firstAttribute="top" secondItem="JdP-rh-LN8" secondAttribute="bottom" constant="8" id="e0k-Hh-5oy"/>
                             <constraint firstItem="JwJ-Ye-As9" firstAttribute="top" secondItem="51N-Dg-geE" secondAttribute="bottom" constant="8" id="fb0-x4-H5v"/>
+                            <constraint firstItem="lyW-gz-ew5" firstAttribute="height" secondItem="xpm-35-UtG" secondAttribute="height" id="h5t-Xk-sMp"/>
                             <constraint firstItem="2Zm-J1-y4e" firstAttribute="top" secondItem="SkN-Qq-2eI" secondAttribute="bottom" constant="39" id="i66-bk-YJ7"/>
                             <constraint firstItem="B36-eU-FTd" firstAttribute="top" secondItem="2Zm-J1-y4e" secondAttribute="bottom" constant="20" id="kOa-Mu-Qwj"/>
                             <constraint firstItem="SkN-Qq-2eI" firstAttribute="width" secondItem="ktI-XR-TlR" secondAttribute="width" id="lCf-Zh-FGx"/>
+                            <constraint firstItem="lyW-gz-ew5" firstAttribute="top" secondItem="202-3P-yEi" secondAttribute="bottom" id="mPN-aE-iaf"/>
                             <constraint firstAttribute="trailing" secondItem="JdP-rh-LN8" secondAttribute="trailing" id="ncy-aO-LGv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lyW-gz-ew5" secondAttribute="trailing" constant="8" id="om3-Hu-QJ0"/>
                             <constraint firstItem="xpm-35-UtG" firstAttribute="height" secondItem="JwJ-Ye-As9" secondAttribute="height" id="peU-oE-oGL"/>
                             <constraint firstAttribute="centerX" secondItem="2Zm-J1-y4e" secondAttribute="centerX" constant="-0.5" id="qCc-ss-uKP"/>
                             <constraint firstItem="JdP-rh-LN8" firstAttribute="top" secondItem="JwJ-Ye-As9" secondAttribute="bottom" constant="8" id="sL2-CQ-XrT"/>
@@ -179,6 +194,16 @@
                             <constraint firstAttribute="trailing" secondItem="SkN-Qq-2eI" secondAttribute="trailing" id="z2Y-bL-tbh"/>
                             <constraint firstItem="xpm-35-UtG" firstAttribute="height" secondItem="JdP-rh-LN8" secondAttribute="height" id="zWX-zB-31K"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="33m-by-jKB"/>
+                                <exclude reference="9up-6y-x5U"/>
+                                <exclude reference="THU-qL-RdZ"/>
+                                <exclude reference="X6r-bO-TaF"/>
+                                <exclude reference="om3-Hu-QJ0"/>
+                                <exclude reference="wUE-YV-fBR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="playerScore" destination="lyW-gz-ew5" id="Ksn-JM-5s9"/>

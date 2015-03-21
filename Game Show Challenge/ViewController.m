@@ -23,7 +23,7 @@ static GameShowGame *jeopardyGame;
     // Do any additional setup after loading the view, typically from a nib.
     jeopardyGame = [[GameShowGame alloc] init];
     jeopardyGame.playerScore = 0;
-    self.playerScore.text = @"0";
+    self.playerScore.text = @"$0";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,13 +39,13 @@ static GameShowGame *jeopardyGame;
 - (IBAction)markAnswerCorrect {
     jeopardyGame.playerScore += jeopardyGame.nextValue;
     jeopardyGame.nextValue = 0;
-    [self.playerScore setText:[@(jeopardyGame.playerScore) stringValue]];
+    [self setPlayerScoreValue:jeopardyGame.playerScore];
 }
 
 - (IBAction)markAnswerIncorrect {
     jeopardyGame.playerScore -= jeopardyGame.nextValue;
     jeopardyGame.nextValue = 0;
-    [self.playerScore setText:[@(jeopardyGame.playerScore) stringValue]];
+    [self setPlayerScoreValue:jeopardyGame.playerScore];
 }
 
 - (IBAction)toggleJeopardyRound:(UISegmentedControl *)sender {
@@ -54,7 +54,6 @@ static GameShowGame *jeopardyGame;
             int oldValue = [clueValue.titleLabel.text intValue];
             int newValue = oldValue / 2;
             NSString *newValueText = [@(newValue) stringValue];
-//            [clueValue.titleLabel setText:newValueText];
             [clueValue setTitle:newValueText forState:UIControlStateNormal];
         }
     } else {
@@ -62,13 +61,23 @@ static GameShowGame *jeopardyGame;
             int oldValue = [clueValue.titleLabel.text intValue];
             int newValue = oldValue * 2;
             NSString *newValueText = [@(newValue) stringValue];
-//            [clueValue.titleLabel setText:newValueText];
             [clueValue setTitle:newValueText forState:UIControlStateNormal];
         }
     }
-    
-    
-    
+}
+
+- (void) setPlayerScoreValue:(NSInteger)newScore {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    [formatter setGroupingSeparator:groupingSeparator];
+    [formatter setGroupingSize:3];
+    [formatter setAlwaysShowsDecimalSeparator:NO];
+    [formatter setMaximumFractionDigits:0];
+    [formatter setUsesGroupingSeparator:YES];
+        
+    NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInteger:newScore]];
+    [self.playerScore setText:formattedString];
 }
 
 @end
