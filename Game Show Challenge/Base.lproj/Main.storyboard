@@ -76,6 +76,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="DqJ-dI-W1x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-rh-LN8">
                                 <rect key="frame" x="0.0" y="307" width="600" height="75"/>
@@ -85,6 +88,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="AXm-Qp-MfE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-wz-qFj">
                                 <rect key="frame" x="0.0" y="390" width="600" height="75"/>
@@ -94,6 +100,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="dTr-Iu-480"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktI-XR-TlR">
                                 <rect key="frame" x="0.0" y="473" width="303" height="40"/>
@@ -106,6 +115,9 @@
                                     <color key="titleColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="correct" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="markAnswerCorrect" destination="yPE-07-An1" eventType="touchUpInside" id="WIh-uV-3sN"/>
                                 </connections>
@@ -121,6 +133,12 @@
                                     <color key="titleColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="correct" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="markAnswerIncorrect" destination="yPE-07-An1" eventType="touchUpInside" id="dnM-px-hEf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

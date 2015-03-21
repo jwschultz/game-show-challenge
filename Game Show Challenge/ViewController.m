@@ -38,6 +38,13 @@ static GameShowGame *jeopardyGame;
 
 - (IBAction)markAnswerCorrect {
     jeopardyGame.playerScore += jeopardyGame.nextValue;
+    jeopardyGame.nextValue = 0;
+    [self.playerScore setText:[@(jeopardyGame.playerScore) stringValue]];
+}
+
+- (IBAction)markAnswerIncorrect {
+    jeopardyGame.playerScore -= jeopardyGame.nextValue;
+    jeopardyGame.nextValue = 0;
     [self.playerScore setText:[@(jeopardyGame.playerScore) stringValue]];
 }
 
