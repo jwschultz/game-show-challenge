@@ -48,4 +48,27 @@ static GameShowGame *jeopardyGame;
     [self.playerScore setText:[@(jeopardyGame.playerScore) stringValue]];
 }
 
+- (IBAction)toggleJeopardyRound:(UISegmentedControl *)sender {
+    if ([sender selectedSegmentIndex] == 0) {
+        for (UIButton *clueValue in self.clueValues) {
+            int oldValue = [clueValue.titleLabel.text intValue];
+            int newValue = oldValue / 2;
+            NSString *newValueText = [@(newValue) stringValue];
+//            [clueValue.titleLabel setText:newValueText];
+            [clueValue setTitle:newValueText forState:UIControlStateNormal];
+        }
+    } else {
+        for (UIButton *clueValue in self.clueValues) {
+            int oldValue = [clueValue.titleLabel.text intValue];
+            int newValue = oldValue * 2;
+            NSString *newValueText = [@(newValue) stringValue];
+//            [clueValue.titleLabel setText:newValueText];
+            [clueValue setTitle:newValueText forState:UIControlStateNormal];
+        }
+    }
+    
+    
+    
+}
+
 @end

@@ -43,8 +43,11 @@
                                     <segment title="Double Jeopardy!"/>
                                 </segments>
                                 <color key="tintColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="toggleJeopardyRound:" destination="yPE-07-An1" eventType="valueChanged" id="5Va-tb-WzG"/>
+                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-35-UtG">
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-35-UtG">
                                 <rect key="frame" x="0.0" y="58" width="600" height="75"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
@@ -56,7 +59,7 @@
                                     <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="fab-lX-d0u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51N-Dg-geE">
+                            <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51N-Dg-geE">
                                 <rect key="frame" x="0.0" y="141" width="600" height="75"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
@@ -68,7 +71,7 @@
                                     <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="gWP-BI-1X3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-Ye-As9">
+                            <button opaque="NO" tag="600" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-Ye-As9">
                                 <rect key="frame" x="0.0" y="224" width="600" height="75"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
@@ -80,7 +83,7 @@
                                     <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="DqJ-dI-W1x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-rh-LN8">
+                            <button opaque="NO" tag="800" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-rh-LN8">
                                 <rect key="frame" x="0.0" y="307" width="600" height="75"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
@@ -92,7 +95,7 @@
                                     <action selector="setNextValue:" destination="yPE-07-An1" eventType="touchUpInside" id="AXm-Qp-MfE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-wz-qFj">
+                            <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-wz-qFj">
                                 <rect key="frame" x="0.0" y="390" width="600" height="75"/>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="20"/>
@@ -115,9 +118,6 @@
                                     <color key="titleColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="correct" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="markAnswerCorrect" destination="yPE-07-An1" eventType="touchUpInside" id="WIh-uV-3sN"/>
                                 </connections>
@@ -133,9 +133,6 @@
                                     <color key="titleColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="correct" value="NO"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="markAnswerIncorrect" destination="yPE-07-An1" eventType="touchUpInside" id="dnM-px-hEf"/>
                                 </connections>
@@ -186,6 +183,10 @@
                     <connections>
                         <outlet property="playerScore" destination="lyW-gz-ew5" id="Ksn-JM-5s9"/>
                         <outletCollection property="clueValues" destination="xpm-35-UtG" id="Ugm-SQ-7dH"/>
+                        <outletCollection property="clueValues" destination="51N-Dg-geE" id="vie-v7-Hwe"/>
+                        <outletCollection property="clueValues" destination="JwJ-Ye-As9" id="xMp-46-TPm"/>
+                        <outletCollection property="clueValues" destination="JdP-rh-LN8" id="iX7-8p-fOI"/>
+                        <outletCollection property="clueValues" destination="MhY-wz-qFj" id="kZ1-ax-CQt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSp-H4-L2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
