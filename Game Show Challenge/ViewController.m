@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "GameShowGame.h"
 
 @interface ViewController ()
@@ -24,6 +25,11 @@ static GameShowGame *jeopardyGame;
     jeopardyGame = [[GameShowGame alloc] init];
     jeopardyGame.playerScore = 0;
     self.playerScore.text = @"$0";
+
+    for (UIButton *yourButton in self.clueValues) {
+        yourButton.layer.cornerRadius = 10; // this value vary as per your desire
+        yourButton.clipsToBounds = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
