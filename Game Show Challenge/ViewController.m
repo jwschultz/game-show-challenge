@@ -78,6 +78,11 @@ static GameShowGame *jeopardyGame;
         
     NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInteger:newScore]];
     [self.playerScore setText:formattedString];
+    if (newScore > 0) {
+        [self.playerScore setTextColor:[UIColor whiteColor]];
+    } else {
+        [self.playerScore setTextColor:[UIColor redColor]];
+    }
 }
 
 @end
