@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) UIButton *selectedValue;
+
 @end
 
 @implementation ViewController
@@ -27,34 +29,54 @@ static GameShowGame *jeopardyGame;
     self.playerScore.text = @"$0";
 
     for (UIButton *yourButton in self.clueValues) {
-        yourButton.layer.cornerRadius = 10; // this value vary as per your desire
+        yourButton.layer.cornerRadius = 10;
         yourButton.clipsToBounds = YES;
     }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
 - (IBAction)setNextValue:(UIButton *)sender {
-    jeopardyGame.nextValue = [sender.titleLabel.text intValue];
+    [self unsetNextValue];
+    if (sender == self.selectedValue) {
+        self.selectedValue = nil;
+    } else {
+        self.selectedValue = sender;
+        jeopardyGame.nextValue = [sender.titleLabel.text intValue];
+        UIColor *borderColor = [UIColor colorWithRed:(231.0/255.0) green:(196.0/255.0) blue:(90.0/255.0) alpha:1.0];
+        [sender.layer setBorderColor:[borderColor CGColor]];
+        CGFloat borderWidth = 5.0;
+        [sender.layer setBorderWidth:borderWidth];
+    }
+}
+
+- (void)unsetNextValue {
+    for (UIButton *clueValue in self.clueValues) {
+        [clueValue.layer setBorderColor:nil];
+        [clueValue.layer setBorderWidth:0.0];
+    }
+    jeopardyGame.nextValue = 0;
 }
 
 - (IBAction)markAnswerCorrect {
     jeopardyGame.playerScore += jeopardyGame.nextValue;
-    jeopardyGame.nextValue = 0;
     [self setPlayerScoreValue:jeopardyGame.playerScore];
+    [self unsetNextValue];
 }
 
 - (IBAction)markAnswerIncorrect {
     jeopardyGame.playerScore -= jeopardyGame.nextValue;
-    jeopardyGame.nextValue = 0;
     [self setPlayerScoreValue:jeopardyGame.playerScore];
+    [self unsetNextValue];
 }
 
 - (IBAction)toggleJeopardyRound:(UISegmentedControl *)sender {
+    [self unsetNextValue];
+    self.selectedValue = nil;
+    
     if ([sender selectedSegmentIndex] == 0) {
         for (UIButton *clueValue in self.clueValues) {
             int oldValue = [clueValue.titleLabel.text intValue];
@@ -84,7 +106,7 @@ static GameShowGame *jeopardyGame;
         
     NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInteger:newScore]];
     [self.playerScore setText:formattedString];
-    if (newScore > 0) {
+    if (newScore >= 0) {
         [self.playerScore setTextColor:[UIColor whiteColor]];
     } else {
         [self.playerScore setTextColor:[UIColor redColor]];
