@@ -28,7 +28,6 @@ static NSMutableArray *savedGames;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -54,7 +53,7 @@ static NSMutableArray *savedGames;
     if ([savedGames count] > indexPath.row) {
         GameShowGame *savedGame = [savedGames objectAtIndex:indexPath.row];
         UIView *contentView = cell.subviews[0];
-        [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@", savedGame.description]];
+        [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@", savedGame.gameDescription]];
     }
     
     return cell;

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *playerName;
 
+@property (strong, nonatomic) NSString *gameDescription;
 @property NSInteger playerScore;
 @property NSInteger nextValue;
 
