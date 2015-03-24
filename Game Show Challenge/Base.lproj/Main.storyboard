@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yPE-07-An1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xD8-Ry-MtB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="korinnabold.ttf">
+            <string>KorinnaBold</string>
             <string>KorinnaBold</string>
             <string>KorinnaBold</string>
             <string>KorinnaBold</string>
@@ -252,18 +253,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newGameCell" id="IWc-TR-Ttf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newGameCell" id="IWc-TR-Ttf">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IWc-TR-Ttf" id="WHp-xy-I9Q">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-Hx-tMv">
-                                            <rect key="frame" x="8" y="11" width="584" height="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB9-Hx-tMv">
+                                            <rect key="frame" x="8" y="11" width="551" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="1d7-Te-VMn"/>
+                                                <constraint firstAttribute="height" constant="22" id="MeN-d6-SKy"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="jB9-Hx-tMv" secondAttribute="centerY" constant="-0.25" id="2di-eb-osw"/>
+                                        <constraint firstItem="jB9-Hx-tMv" firstAttribute="leading" secondItem="WHp-xy-I9Q" secondAttribute="leadingMargin" id="BGj-eO-tz0"/>
+                                        <constraint firstItem="jB9-Hx-tMv" firstAttribute="trailing" secondItem="WHp-xy-I9Q" secondAttribute="trailingMargin" id="aEd-5p-DNa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -271,10 +281,27 @@
                                     <segue destination="yPE-07-An1" kind="showDetail" id="ARc-4W-aUi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedGameCell" id="o3g-Ey-Rrt">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="savedGameCell" id="o3g-Ey-Rrt">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o3g-Ey-Rrt" id="8CT-x1-31e">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjI-Ev-KlN">
+                                            <rect key="frame" x="8" y="10.5" width="551" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="BLN-yh-8uO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="wjI-Ev-KlN" firstAttribute="trailing" secondItem="8CT-x1-31e" secondAttribute="trailingMargin" id="9xh-wA-VLK"/>
+                                        <constraint firstAttribute="centerY" secondItem="wjI-Ev-KlN" secondAttribute="centerY" constant="0.25" id="Mun-Tx-mG5"/>
+                                        <constraint firstItem="wjI-Ev-KlN" firstAttribute="leading" secondItem="8CT-x1-31e" secondAttribute="leadingMargin" id="fBC-mV-geK"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.062745101750000004" green="0.0078431377190000002" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

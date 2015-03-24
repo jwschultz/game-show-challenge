@@ -24,11 +24,6 @@ static NSMutableArray *savedGames;
     if (savedGames == nil) {
         savedGames = [NSMutableArray arrayWithCapacity:50];
     }
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,52 +47,18 @@ static NSMutableArray *savedGames;
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath == 0) {
-        return nil;
+    if (indexPath.section == 0) {
+        return [tableView dequeueReusableCellWithIdentifier:@"newGameCell" forIndexPath:indexPath];
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"savedGameCell" forIndexPath:indexPath];
-    if ([savedGames count] > indexPath.row - 1) {
-        GameShowGame *savedGame = [savedGames objectAtIndex:indexPath.row - 1];
-    
-        [cell.textLabel setText:[NSString stringWithFormat:@"%@", savedGame.description]];
+    if ([savedGames count] > indexPath.row) {
+        GameShowGame *savedGame = [savedGames objectAtIndex:indexPath.row];
+        UIView *contentView = cell.subviews[0];
+        [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@", savedGame.description]];
     }
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Navigation
 
