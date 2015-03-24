@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */; };
 		AF89A0F41AB3EDDA00138C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F31AB3EDDA00138C66 /* main.m */; };
 		AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */; };
 		AF89A0FA1AB3EDDA00138C66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F91AB3EDDA00138C66 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGamesTableViewController.h; sourceTree = "<group>"; };
+		AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGamesTableViewController.m; sourceTree = "<group>"; };
 		AF89A0EE1AB3EDDA00138C66 /* Game Show Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Show Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89A0F21AB3EDDA00138C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF89A0F31AB3EDDA00138C66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */,
+				AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		AF89A0E51AB3EDDA00138C66 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 		AF89A0F01AB3EDDA00138C66 /* Game Show Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */,
 				AFE64F041ABBC8D20070BCA9 /* Domain */,
 				AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */,
 				AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */,
@@ -237,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF89A0FA1AB3EDDA00138C66 /* ViewController.m in Sources */,
+				AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */,
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
 				AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */,
 				AF89A0F41AB3EDDA00138C66 /* main.m in Sources */,

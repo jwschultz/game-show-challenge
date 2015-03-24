@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class GameShowGame;
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) GameShowGame *jeopardyGame;
 @property (weak, nonatomic) IBOutlet UITextField *playerScore;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *clueValues;
 

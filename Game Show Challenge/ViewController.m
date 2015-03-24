@@ -18,15 +18,18 @@
 
 @implementation ViewController
 
-static GameShowGame *jeopardyGame;
+//static GameShowGame *jeopardyGame;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    jeopardyGame = [[GameShowGame alloc] init];
-    jeopardyGame.playerScore = 0;
-    self.playerScore.text = @"$0";
+    if (self.jeopardyGame == nil) {
+        self.jeopardyGame = [[GameShowGame alloc] init];
+        self.jeopardyGame.playerScore = 0;
+    }
+
+    [self setPlayerScoreValue:self.jeopardyGame.playerScore];
 
     for (UIButton *yourButton in self.clueValues) {
         yourButton.layer.cornerRadius = 10;
@@ -45,7 +48,7 @@ static GameShowGame *jeopardyGame;
         self.selectedValue = nil;
     } else {
         self.selectedValue = sender;
-        jeopardyGame.nextValue = [sender.titleLabel.text intValue];
+        self.jeopardyGame.nextValue = [sender.titleLabel.text intValue];
         UIColor *borderColor = [UIColor colorWithRed:(231.0/255.0) green:(196.0/255.0) blue:(90.0/255.0) alpha:1.0];
         [sender.layer setBorderColor:[borderColor CGColor]];
         CGFloat borderWidth = 5.0;
@@ -58,18 +61,18 @@ static GameShowGame *jeopardyGame;
         [clueValue.layer setBorderColor:nil];
         [clueValue.layer setBorderWidth:0.0];
     }
-    jeopardyGame.nextValue = 0;
+    self.jeopardyGame.nextValue = 0;
 }
 
 - (IBAction)markAnswerCorrect {
-    jeopardyGame.playerScore += jeopardyGame.nextValue;
-    [self setPlayerScoreValue:jeopardyGame.playerScore];
+    self.jeopardyGame.playerScore += self.jeopardyGame.nextValue;
+    [self setPlayerScoreValue:self.jeopardyGame.playerScore];
     [self unsetNextValue];
 }
 
 - (IBAction)markAnswerIncorrect {
-    jeopardyGame.playerScore -= jeopardyGame.nextValue;
-    [self setPlayerScoreValue:jeopardyGame.playerScore];
+    self.jeopardyGame.playerScore -= self.jeopardyGame.nextValue;
+    [self setPlayerScoreValue:self.jeopardyGame.playerScore];
     [self unsetNextValue];
 }
 
