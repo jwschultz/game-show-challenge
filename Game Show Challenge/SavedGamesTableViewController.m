@@ -13,18 +13,41 @@
 
 @interface SavedGamesTableViewController ()
 
+@property (strong, nonatomic) GameShowGame *jeopardyGame;
+@property (strong, nonatomic) NSArray *savedGames;
+
 @end
 
 @implementation SavedGamesTableViewController
 
-static NSMutableArray *savedGames;
+//static NSMutableArray *savedGames;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (savedGames == nil) {
-        savedGames = [NSMutableArray arrayWithCapacity:50];
+    if (self.savedGames == nil) {
+        self.savedGames = [NSMutableArray arrayWithCapacity:50];
     }
+    
+//    [self.savedGames removeAllObjects];
+    // Find all posts by the current user
+    PFUser *user = [PFUser currentUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
+    [query whereKey:@"user" equalTo:user];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *gameShowGames, NSError *error) {
+        NSMutableArray *theGames = [NSMutableArray arrayWithCapacity:[gameShowGames count]];
+        for (PFObject *gameObject in gameShowGames) {
+            GameShowGame *game = [[GameShowGame alloc] init];
+            game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
+            game.gameDescription = [gameObject objectForKey:@"gameDescription"];
+            game.parseObjectId = gameObject.objectId;
+            [theGames addObject:game];
+        }
+        self.savedGames = [NSArray arrayWithArray:theGames];
+        [self.tableView reloadData];
+    }];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,21 +65,7 @@ static NSMutableArray *savedGames;
         return 1;
     }
     
-    [savedGames removeAllObjects];
-    // Find all posts by the current user
-    PFUser *user = [PFUser currentUser];
-    PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
-    [query whereKey:@"user" equalTo:user];
-    NSArray *gameShowGames = [query findObjects];
-    for (PFObject *gameObject in gameShowGames) {
-        GameShowGame *game = [[GameShowGame alloc] init];
-        game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
-        game.gameDescription = [gameObject objectForKey:@"gameDescription"];
-        game.parseObjectId = gameObject.objectId;
-        [savedGames addObject:game];
-    }
-    
-    return [savedGames count];
+    return [self.savedGames count];
 }
 
 
@@ -65,8 +74,8 @@ static NSMutableArray *savedGames;
         return [tableView dequeueReusableCellWithIdentifier:@"newGameCell" forIndexPath:indexPath];
     }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"savedGameCell" forIndexPath:indexPath];
-    if ([savedGames count] > indexPath.row) {
-        GameShowGame *savedGame = [savedGames objectAtIndex:indexPath.row];
+    if ([self.savedGames count] > indexPath.row) {
+        GameShowGame *savedGame = [self.savedGames objectAtIndex:indexPath.row];
         UIView *contentView = cell.subviews[0];
         [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@", savedGame.gameDescription]];
     }
@@ -82,13 +91,13 @@ static NSMutableArray *savedGames;
     ViewController *viewController = [segue destinationViewController];
     UITableViewCell *selectedCell = (UITableViewCell*)sender;
     
-    NSArray *savedGamesArray = savedGames;
+    NSArray *savedGamesArray = self.savedGames;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:selectedCell];
     if (indexPath.section > 0 && [savedGamesArray count] > indexPath.row) {
         viewController.jeopardyGame = [savedGamesArray objectAtIndex:(indexPath.row)];
     } else {
         viewController.jeopardyGame = [[GameShowGame alloc] init];
-        [savedGames addObject:viewController.jeopardyGame];
+//        [self.s addObject:viewController.jeopardyGame];
     }
 }
 

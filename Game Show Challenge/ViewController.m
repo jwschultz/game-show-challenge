@@ -123,7 +123,7 @@
 
     PFObject *gameObject;
     if (self.jeopardyGame != nil && self.jeopardyGame.parseObjectId != nil) {
-        PFQuery *query = [PFQuery queryWithClassName:@"GameScore"];
+        PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
         gameObject = [query getObjectWithId:self.jeopardyGame.parseObjectId];
     } else {
         gameObject = [PFObject objectWithClassName:@"GameShowGame"];

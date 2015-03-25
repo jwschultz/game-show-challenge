@@ -12,6 +12,4 @@
 
 @interface SavedGamesTableViewController : UITableViewController
 
-@property (strong, nonatomic) GameShowGame *jeopardyGame;
-
 @end
