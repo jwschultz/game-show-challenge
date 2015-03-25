@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GameShowGame.h"
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 
@@ -17,8 +18,6 @@
 @end
 
 @implementation ViewController
-
-//static GameShowGame *jeopardyGame;
 
 
 - (void)viewDidLoad {
@@ -110,11 +109,32 @@
     NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInteger:newScore]];
     [self.playerScore setText:formattedString];
     self.jeopardyGame.gameDescription = formattedString;
+    [self saveGameToParse];
     if (newScore >= 0) {
         [self.playerScore setTextColor:[UIColor whiteColor]];
     } else {
         [self.playerScore setTextColor:[UIColor redColor]];
     }
+}
+
+- (void) saveGameToParse {
+    
+    PFUser *user = [PFUser currentUser];
+
+    PFObject *gameObject;
+    if (self.jeopardyGame != nil && self.jeopardyGame.parseObjectId != nil) {
+        PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
+        gameObject = [query getObjectWithId:self.jeopardyGame.parseObjectId];
+    } else {
+        gameObject = [PFObject objectWithClassName:@"GameShowGame"];
+    }
+    
+    [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
+    [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
+    gameObject[@"user"] = user;
+    
+    [gameObject save];
+    self.jeopardyGame.parseObjectId = gameObject.objectId;
 }
 
 @end

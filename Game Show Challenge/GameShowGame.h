@@ -17,6 +17,7 @@
 @property NSInteger nextValue;
 
 @property (strong, nonatomic) NSDictionary *pastValues;
+@property (strong, nonatomic) NSString *parseObjectId;
 
 
 @end
