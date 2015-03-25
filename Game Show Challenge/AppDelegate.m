@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"w5RAxEGiVabFqloDlv1fJZoPmibtu3Eb9MKsyFzh"
+                  clientKey:@"4SQ72d8aEWhqCDLOy1xo0o3aPLWmBAhmlNhMLG9l"];
+
+    [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *error) {
+        if (error) {
+            NSLog(@"Anonymous login failed.");
+        } else {
+            NSLog(@"Anonymous user logged in.");
+        }
+    }];
+    
+    [PFUser enableAutomaticUser];
+//    [[PFUser currentUser] save];
+
+    
     return YES;
 }
 

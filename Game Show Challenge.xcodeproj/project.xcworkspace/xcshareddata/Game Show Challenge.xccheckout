@@ -10,6 +10,8 @@
 	<string>Game Show Challenge</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>40DDC1A8A1CCD524F898BA8BA0A275EA18DB50C6</key>
+		<string>https://github.com/jwschultz/preopardy.git</string>
 		<key>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</key>
 		<string>github.com:jwschultz/game-show-challenge.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Game Show Challenge.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>40DDC1A8A1CCD524F898BA8BA0A275EA18DB50C6</key>
+		<string>../../../Preopardy</string>
 		<key>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>750D299496B1E1A12EEE31CDA62C4CDE8CD7B7DD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Game%20Show%20Challenge</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>40DDC1A8A1CCD524F898BA8BA0A275EA18DB50C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Preopardy</string>
 		</dict>
 	</array>
 </dict>

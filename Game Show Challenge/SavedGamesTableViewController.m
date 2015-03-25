@@ -9,6 +9,7 @@
 #import "SavedGamesTableViewController.h"
 #import "GameShowGame.h"
 #import "ViewController.h"
+#import <Parse/Parse.h>
 
 @interface SavedGamesTableViewController ()
 
@@ -39,6 +40,20 @@ static NSMutableArray *savedGames;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 1;
+    }
+    
+    [savedGames removeAllObjects];
+    // Find all posts by the current user
+    PFUser *user = [PFUser currentUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
+    [query whereKey:@"user" equalTo:user];
+    NSArray *gameShowGames = [query findObjects];
+    for (PFObject *gameObject in gameShowGames) {
+        GameShowGame *game = [[GameShowGame alloc] init];
+        game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
+        game.gameDescription = [gameObject objectForKey:@"gameDescription"];
+        game.parseObjectId = gameObject.objectId;
+        [savedGames addObject:game];
     }
     
     return [savedGames count];
