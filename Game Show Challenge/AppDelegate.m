@@ -20,16 +20,9 @@
     
     [Parse setApplicationId:@"w5RAxEGiVabFqloDlv1fJZoPmibtu3Eb9MKsyFzh"
                   clientKey:@"4SQ72d8aEWhqCDLOy1xo0o3aPLWmBAhmlNhMLG9l"];
-
-    [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *error) {
-        if (error) {
-            NSLog(@"Anonymous login failed.");
-        } else {
-            NSLog(@"Anonymous user logged in.");
-        }
-    }];
     
     [PFUser enableAutomaticUser];
+    [[PFUser currentUser] saveInBackground];
     
     return YES;
 }
