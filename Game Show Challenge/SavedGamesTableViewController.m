@@ -78,6 +78,10 @@
         GameShowGame *savedGame = [self.savedGames objectAtIndex:indexPath.row];
         UIView *contentView = cell.subviews[0];
         [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@", savedGame.gameDescription]];
+        if (savedGame.playerScore < 0) {
+            UILabel * playerScoreLabel = contentView.subviews[0];
+            [playerScoreLabel setTextColor:[UIColor redColor]];
+        }
     }
     
     return cell;
