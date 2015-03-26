@@ -29,24 +29,24 @@
         self.savedGames = [NSMutableArray arrayWithCapacity:50];
     }
     
-//    [self.savedGames removeAllObjects];
-    // Find all posts by the current user
     PFUser *user = [PFUser currentUser];
     PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
     [query whereKey:@"user" equalTo:user];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *gameShowGames, NSError *error) {
-        NSMutableArray *theGames = [NSMutableArray arrayWithCapacity:[gameShowGames count]];
-        for (PFObject *gameObject in gameShowGames) {
-            GameShowGame *game = [[GameShowGame alloc] init];
-            game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
-            game.gameDescription = [gameObject objectForKey:@"gameDescription"];
-            game.parseObjectId = gameObject.objectId;
-            [theGames addObject:game];
-        }
-        self.savedGames = [NSArray arrayWithArray:theGames];
-        [self.tableView reloadData];
-    }];
-    
+    if (user.objectId) {
+        [query findObjectsInBackgroundWithBlock:^(NSArray *gameShowGames, NSError *error) {
+            NSMutableArray *theGames = [NSMutableArray arrayWithCapacity:[gameShowGames count]];
+            for (PFObject *gameObject in gameShowGames) {
+                GameShowGame *game = [[GameShowGame alloc] init];
+                game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
+                game.gameDescription = [gameObject objectForKey:@"gameDescription"];
+                game.parseObjectId = gameObject.objectId;
+                game.persisted = YES;
+                [theGames addObject:game];
+            }
+            self.savedGames = [NSArray arrayWithArray:theGames];
+            [self.tableView reloadData];
+        }];
+    }
 
 }
 
