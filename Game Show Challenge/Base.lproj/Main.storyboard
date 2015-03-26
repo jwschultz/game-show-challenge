@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xD8-Ry-MtB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H7i-T1-o4B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -153,13 +153,13 @@
                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="36"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRM-lh-qde">
-                                <rect key="frame" x="16" y="551" width="30" height="30"/>
-                                <state key="normal" title="Go">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDs-oF-q8I">
+                                <rect key="frame" x="150" y="20" width="300" height="65.5"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xD8-Ry-MtB" kind="show" id="eyG-2s-Npn"/>
+                                    <segue destination="H7i-T1-o4B" kind="show" id="idA-DN-MEI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,9 +242,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSp-H4-L2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-124.5" y="822"/>
+            <point key="canvasLocation" x="-125" y="822"/>
         </scene>
-        <!--Saved Games Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="eht-5o-a2n">
+            <objects>
+                <navigationController id="H7i-T1-o4B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SME-yX-Ndy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.92953889270000001" green="0.92953889270000001" blue="0.92953889270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92953889270000001" green="0.92953889270000001" blue="0.92953889270000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xD8-Ry-MtB" kind="relationship" relationship="rootViewController" id="J6y-Nb-8V4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Da0-vp-nZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1446" y="1524"/>
+        </scene>
+        <!--Game Show Challenge-->
         <scene sceneID="wSi-Bh-qz9">
             <objects>
                 <tableViewController id="xD8-Ry-MtB" customClass="SavedGamesTableViewController" sceneMemberID="viewController">
@@ -253,7 +271,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newGameCell" id="IWc-TR-Ttf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newGameCell" rowHeight="43" id="IWc-TR-Ttf">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IWc-TR-Ttf" id="WHp-xy-I9Q">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -281,7 +299,7 @@
                                     <segue destination="yPE-07-An1" kind="showDetail" id="ARc-4W-aUi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="savedGameCell" id="o3g-Ey-Rrt">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="savedGameCell" rowHeight="43" id="o3g-Ey-Rrt">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o3g-Ey-Rrt" id="8CT-x1-31e">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -315,13 +333,14 @@
                             <outlet property="delegate" destination="xD8-Ry-MtB" id="jV5-Tu-XR1"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Game Show Challenge" id="e3o-q3-zVG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3W-NK-bgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-492" y="1584"/>
+            <point key="canvasLocation" x="-664" y="1516"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RNL-24-NlG"/>
+        <segue reference="ARc-4W-aUi"/>
     </inferredMetricsTieBreakers>
 </document>
