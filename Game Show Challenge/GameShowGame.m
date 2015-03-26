@@ -10,4 +10,9 @@
 
 @implementation GameShowGame
 
+- (GameShowGame *)init {
+    self.persisted = NO;
+    return self;
+}
+
 @end

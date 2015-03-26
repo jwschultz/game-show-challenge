@@ -40,6 +40,7 @@
                 game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
                 game.gameDescription = [gameObject objectForKey:@"gameDescription"];
                 game.parseObjectId = gameObject.objectId;
+                game.persisted = YES;
                 [theGames addObject:game];
             }
             self.savedGames = [NSArray arrayWithArray:theGames];

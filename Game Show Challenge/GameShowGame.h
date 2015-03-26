@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *gameDescription;
 @property NSInteger playerScore;
 @property NSInteger nextValue;
+@property BOOL persisted;
 
 @property (strong, nonatomic) NSDictionary *pastValues;
 @property (strong, nonatomic) NSString *parseObjectId;

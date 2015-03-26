@@ -118,23 +118,36 @@
 }
 
 - (void) saveGameToParse {
-    
     PFUser *user = [PFUser currentUser];
-
     PFObject *gameObject;
-    if (self.jeopardyGame != nil && self.jeopardyGame.parseObjectId != nil) {
-        PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
-        gameObject = [query getObjectWithId:self.jeopardyGame.parseObjectId];
+    
+    // if this game has previously been saved, it should have a parseObjectId. Update the object with that id.
+    if (self.jeopardyGame.persisted) {
+        if (self.jeopardyGame != nil && self.jeopardyGame.parseObjectId != nil) {
+            PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
+            [query getObjectInBackgroundWithId:self.jeopardyGame.parseObjectId block:^(PFObject *gameObject, NSError *error) {
+                [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
+                [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
+                [gameObject saveInBackground];
+            }];
+        }
     } else {
         gameObject = [PFObject objectWithClassName:@"GameShowGame"];
+        
+        [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
+        [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
+        gameObject[@"user"] = user;
+
+        [gameObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                self.jeopardyGame.parseObjectId = gameObject.objectId;
+            } else {
+                NSLog(@"There was an error: %@", error);
+            }
+        }];
+        self.jeopardyGame.persisted = YES; // track the fact that we're trying to save this
     }
-    
-    [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
-    [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
-    gameObject[@"user"] = user;
-    
-    [gameObject save];
-    self.jeopardyGame.parseObjectId = gameObject.objectId;
+
 }
 
 @end
