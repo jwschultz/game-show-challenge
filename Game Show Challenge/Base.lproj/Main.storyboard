@@ -32,7 +32,7 @@
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-J1-y4e">
                                 <rect key="frame" x="180" y="552" width="241" height="29"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="p0e-1x-4yA"/>
                                 </constraints>
@@ -163,7 +163,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JwJ-Ye-As9" secondAttribute="trailing" constant="16" id="2Iw-ae-0wv"/>
                             <constraint firstItem="lyW-gz-ew5" firstAttribute="leading" secondItem="Yv2-qQ-Qo1" secondAttribute="leadingMargin" constant="8" id="33m-by-jKB"/>
@@ -299,7 +299,7 @@
                                     <segue destination="yPE-07-An1" kind="showDetail" id="ARc-4W-aUi"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="savedGameCell" rowHeight="43" id="o3g-Ey-Rrt">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="savedGameCell" rowHeight="43" id="o3g-Ey-Rrt" customClass="SavedGameTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o3g-Ey-Rrt" id="8CT-x1-31e">
                                     <autoresizingMask key="autoresizingMask"/>

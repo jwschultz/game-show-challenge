@@ -12,6 +12,7 @@
 
 - (GameShowGame *)init {
     self.persisted = NO;
+    self.airDate = [NSDate dateWithTimeIntervalSinceNow:0];
     return self;
 }
 

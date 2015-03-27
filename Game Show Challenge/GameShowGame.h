@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSDictionary *pastValues;
 @property (strong, nonatomic) NSString *parseObjectId;
+@property (strong, nonatomic) NSDate *airDate;
 
 
 @end

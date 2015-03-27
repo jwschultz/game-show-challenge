@@ -7,6 +7,7 @@
 //
 
 #import "SavedGamesTableViewController.h"
+#import "SavedGameTableViewCell.h"
 #import "GameShowGame.h"
 #import "ViewController.h"
 #import <Parse/Parse.h>
@@ -19,8 +20,6 @@
 @end
 
 @implementation SavedGamesTableViewController
-
-//static NSMutableArray *savedGames;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,6 +38,11 @@
                 GameShowGame *game = [[GameShowGame alloc] init];
                 game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
                 game.gameDescription = [gameObject objectForKey:@"gameDescription"];
+                //        [gameObject setValue:self.jeopardyGame.airDate forKey:@"airDate"];
+                game.airDate = [gameObject objectForKey:@"airDate"];
+                if (!game.airDate) {
+                    game.airDate = [NSDate dateWithTimeIntervalSinceNow:0];
+                }
                 game.parseObjectId = gameObject.objectId;
                 game.persisted = YES;
                 [theGames addObject:game];
@@ -73,11 +77,13 @@
     if (indexPath.section == 0) {
         return [tableView dequeueReusableCellWithIdentifier:@"newGameCell" forIndexPath:indexPath];
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"savedGameCell" forIndexPath:indexPath];
+    SavedGameTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"savedGameCell" forIndexPath:indexPath];
     if ([self.savedGames count] > indexPath.row) {
         GameShowGame *savedGame = [self.savedGames objectAtIndex:indexPath.row];
+        cell.game = savedGame;
         UIView *contentView = cell.subviews[0];
-        [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@", savedGame.gameDescription]];
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:savedGame.airDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+        [contentView.subviews[0] setText:[NSString stringWithFormat:@"%@ (%@)", dateString, savedGame.gameDescription]];
         if (savedGame.playerScore < 0) {
             UILabel * playerScoreLabel = contentView.subviews[0];
             [playerScoreLabel setTextColor:[UIColor redColor]];
@@ -105,7 +111,6 @@
         viewController.jeopardyGame = [savedGamesArray objectAtIndex:(indexPath.row)];
     } else {
         viewController.jeopardyGame = [[GameShowGame alloc] init];
-//        [self.s addObject:viewController.jeopardyGame];
     }
 }
 

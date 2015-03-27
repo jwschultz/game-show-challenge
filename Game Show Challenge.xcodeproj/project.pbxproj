@@ -34,6 +34,7 @@
 		AFB9A7FE1AB91EC20035AB9C /* korinnabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */; };
 		AFD4950B1AC30E770082F4F7 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD4950A1AC30E770082F4F7 /* DejalActivityView.m */; };
 		AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE64F061ABBC9120070BCA9 /* GameShowGame.m */; };
+		AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFCDAD1AC549FA007EF1E4 /* SavedGameTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		AFD4950A1AC30E770082F4F7 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		AFE64F051ABBC9120070BCA9 /* GameShowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShowGame.h; sourceTree = "<group>"; };
 		AFE64F061ABBC9120070BCA9 /* GameShowGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameShowGame.m; sourceTree = "<group>"; };
+		AFEFCDAC1AC549FA007EF1E4 /* SavedGameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGameTableViewCell.h; sourceTree = "<group>"; };
+		AFEFCDAD1AC549FA007EF1E4 /* SavedGameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGameTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 		AF89A0F01AB3EDDA00138C66 /* Game Show Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AFEFCDAB1AC549CA007EF1E4 /* Cells */,
 				AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */,
 				AFE64F041ABBC8D20070BCA9 /* Domain */,
 				AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */,
@@ -239,6 +243,15 @@
 				AFE64F061ABBC9120070BCA9 /* GameShowGame.m */,
 			);
 			name = Domain;
+			sourceTree = "<group>";
+		};
+		AFEFCDAB1AC549CA007EF1E4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AFEFCDAC1AC549FA007EF1E4 /* SavedGameTableViewCell.h */,
+				AFEFCDAD1AC549FA007EF1E4 /* SavedGameTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +360,7 @@
 				AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */,
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
 				AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */,
+				AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */,
 				AF89A0F41AB3EDDA00138C66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
