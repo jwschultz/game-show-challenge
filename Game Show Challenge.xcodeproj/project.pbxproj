@@ -35,6 +35,7 @@
 		AFD4950B1AC30E770082F4F7 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD4950A1AC30E770082F4F7 /* DejalActivityView.m */; };
 		AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE64F061ABBC9120070BCA9 /* GameShowGame.m */; };
 		AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFCDAD1AC549FA007EF1E4 /* SavedGameTableViewCell.m */; };
+		AFF00B841AC6CE0700101CFD /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF00B831AC6CE0700101CFD /* NewGameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		AFE64F061ABBC9120070BCA9 /* GameShowGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameShowGame.m; sourceTree = "<group>"; };
 		AFEFCDAC1AC549FA007EF1E4 /* SavedGameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGameTableViewCell.h; sourceTree = "<group>"; };
 		AFEFCDAD1AC549FA007EF1E4 /* SavedGameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGameTableViewCell.m; sourceTree = "<group>"; };
+		AFF00B821AC6CE0700101CFD /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameViewController.h; sourceTree = "<group>"; };
+		AFF00B831AC6CE0700101CFD /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 			children = (
 				AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */,
 				AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */,
+				AFF00B821AC6CE0700101CFD /* NewGameViewController.h */,
+				AFF00B831AC6CE0700101CFD /* NewGameViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */,
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
 				AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */,
+				AFF00B841AC6CE0700101CFD /* NewGameViewController.m in Sources */,
 				AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */,
 				AF89A0F41AB3EDDA00138C66 /* main.m in Sources */,
 			);
