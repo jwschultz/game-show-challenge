@@ -14,6 +14,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) UIButton *selectedValue;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *dailyDoubleCollection;
 
 @end
 
@@ -26,6 +27,12 @@
     if (self.jeopardyGame == nil) {
         self.jeopardyGame = [[GameShowGame alloc] init];
         self.jeopardyGame.playerScore = 0;
+    }
+    
+    if (self.jeopardyGame.gameType == 0) {
+        for (UIControl *control in self.dailyDoubleCollection) {
+            [control setAlpha:0];
+        }
     }
 
     [self setPlayerScoreValue:self.jeopardyGame.playerScore];

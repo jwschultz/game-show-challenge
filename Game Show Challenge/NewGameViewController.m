@@ -10,6 +10,8 @@
 #import "GameShowGame.h"
 
 @interface NewGameViewController ()
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gameType;
 @property (weak, nonatomic) IBOutlet UIDatePicker *airDate;
 
 @end
@@ -36,6 +38,7 @@ const static NSInteger ANOTHER_AIRDATE_TAG = 1;
     UIButton *senderButton = (UIButton*)sender;
     
     viewController.jeopardyGame = [[GameShowGame alloc] init];
+    viewController.jeopardyGame.gameType = self.gameType.selectedSegmentIndex;
     switch (senderButton.tag) {
         case TODAYS_GAME_TAG:
             // just use the default date from the GameShowGame init method
