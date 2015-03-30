@@ -14,7 +14,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) UIButton *selectedValue;
-@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *dailyDoubleCollection;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *dailyDoubleCollection;
 
 @end
 
@@ -30,8 +30,11 @@
     }
     
     if (self.jeopardyGame.gameType == 0) {
-        for (UIControl *control in self.dailyDoubleCollection) {
-            [control setAlpha:0];
+        for (UIView *control in self.dailyDoubleCollection) {
+            [control removeFromSuperview];
+//            control.layer.cornerRadius = 10;
+//            control.clipsToBounds = YES;
+
         }
     }
 
@@ -41,6 +44,7 @@
         yourButton.layer.cornerRadius = 10;
         yourButton.clipsToBounds = YES;
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
