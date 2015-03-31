@@ -178,6 +178,7 @@
         WagerEntryViewController *wagerEntryViewController = (WagerEntryViewController*)viewController;
         wagerEntryViewController.playerScore = self.jeopardyGame.playerScore;
         wagerEntryViewController.gameRound = self.gameRoundSelector.selectedSegmentIndex;
+        wagerEntryViewController.myViewController = self;
     }
 }
 

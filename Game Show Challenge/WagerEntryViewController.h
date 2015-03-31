@@ -11,6 +11,7 @@
 @interface WagerEntryViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *playerWager;
+@property (weak, nonatomic) ViewController *myViewController;
 
 @property (nonatomic) NSInteger playerScore;
 @property NSInteger gameRound;

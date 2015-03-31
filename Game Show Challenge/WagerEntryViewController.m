@@ -59,9 +59,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    ViewController *viewController = (ViewController*)[segue destinationViewController];
     NSInteger wagerValue = [self.playerWager.text intValue];
-    [viewController setDailyDoubleWager:wagerValue];
+    [self.myViewController setDailyDoubleWager:wagerValue];
     [self dismissViewControllerAnimated:NO completion:^{
         //
     }];
