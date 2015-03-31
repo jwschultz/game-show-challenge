@@ -10,9 +10,11 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GameShowGame.h"
 #import <Parse/Parse.h>
+#import "WagerEntryViewController.h"
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gameRoundSelector;
 @property (weak, nonatomic) UIButton *selectedValue;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *dailyDoubleCollection;
 
@@ -28,13 +30,17 @@
         self.jeopardyGame = [[GameShowGame alloc] init];
         self.jeopardyGame.playerScore = 0;
     }
-    
+
+    for (UIView *control in self.dailyDoubleCollection) {
+        if ((UIButton*)control) {
+            control.layer.cornerRadius = 10;
+            control.clipsToBounds = YES;
+        }
+    }
+
     if (self.jeopardyGame.gameType == 0) {
         for (UIView *control in self.dailyDoubleCollection) {
             [control removeFromSuperview];
-//            control.layer.cornerRadius = 10;
-//            control.clipsToBounds = YES;
-
         }
     }
 
@@ -51,6 +57,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)setDailyDoubleWager:(NSInteger)dailyDoubleWager {
+    _dailyDoubleWager = dailyDoubleWager;
+    self.jeopardyGame.nextValue = dailyDoubleWager;
+}
 
 - (IBAction)setNextValue:(UIButton *)sender {
     [self unsetNextValue];
@@ -159,7 +169,17 @@
         }];
         self.jeopardyGame.persisted = YES; // track the fact that we're trying to save this
     }
-
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ViewController *viewController = [segue destinationViewController];
+    if ([viewController isKindOfClass:[WagerEntryViewController class]]) {
+        WagerEntryViewController *wagerEntryViewController = (WagerEntryViewController*)viewController;
+        wagerEntryViewController.playerScore = self.jeopardyGame.playerScore;
+        wagerEntryViewController.gameRound = self.gameRoundSelector.selectedSegmentIndex;
+    }
+}
+
 
 @end

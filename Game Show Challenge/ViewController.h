@@ -10,11 +10,12 @@
 
 @class GameShowGame;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController 
 
 @property (strong, nonatomic) GameShowGame *jeopardyGame;
 @property (weak, nonatomic) IBOutlet UITextField *playerScore;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *clueValues;
+@property (nonatomic) NSInteger dailyDoubleWager;
 
 
 @end

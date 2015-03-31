@@ -32,6 +32,7 @@
 		AF9467EB1AC2AE9B0079D321 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9467EA1AC2AE9B0079D321 /* libz.dylib */; };
 		AF9467ED1AC2AEA30079D321 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9467EC1AC2AEA30079D321 /* libsqlite3.dylib */; };
 		AFB9A7FE1AB91EC20035AB9C /* korinnabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */; };
+		AFD1CCE01ACA3F5100F5BD56 /* WagerEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD1CCDF1ACA3F5100F5BD56 /* WagerEntryViewController.m */; };
 		AFD4950B1AC30E770082F4F7 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD4950A1AC30E770082F4F7 /* DejalActivityView.m */; };
 		AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE64F061ABBC9120070BCA9 /* GameShowGame.m */; };
 		AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFCDAD1AC549FA007EF1E4 /* SavedGameTableViewCell.m */; };
@@ -81,6 +82,8 @@
 		AF9467EA1AC2AE9B0079D321 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AF9467EC1AC2AEA30079D321 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = korinnabold.ttf; sourceTree = "<group>"; };
+		AFD1CCDE1ACA3F5100F5BD56 /* WagerEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WagerEntryViewController.h; sourceTree = "<group>"; };
+		AFD1CCDF1ACA3F5100F5BD56 /* WagerEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WagerEntryViewController.m; sourceTree = "<group>"; };
 		AFD495091AC30E770082F4F7 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		AFD4950A1AC30E770082F4F7 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		AFE64F051ABBC9120070BCA9 /* GameShowGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShowGame.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */,
 				AFF00B821AC6CE0700101CFD /* NewGameViewController.h */,
 				AFF00B831AC6CE0700101CFD /* NewGameViewController.m */,
+				AFD1CCDE1ACA3F5100F5BD56 /* WagerEntryViewController.h */,
+				AFD1CCDF1ACA3F5100F5BD56 /* WagerEntryViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
 				AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */,
 				AFF00B841AC6CE0700101CFD /* NewGameViewController.m in Sources */,
+				AFD1CCE01ACA3F5100F5BD56 /* WagerEntryViewController.m in Sources */,
 				AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */,
 				AF89A0F41AB3EDDA00138C66 /* main.m in Sources */,
 			);
