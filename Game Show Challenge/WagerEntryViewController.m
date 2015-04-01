@@ -47,24 +47,19 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)changeWager:(UISlider *)sender {
-    NSInteger newWagerValue = [sender value] * 1;
-    NSLog(@"New wager value: %li", newWagerValue);
-    NSLog(@"%@", [NSString stringWithFormat:@"%li", newWagerValue]);
-    NSLog(@"Text field: %@", self.playerWager);
+    NSInteger newWagerValue = 50.0 * floor(([sender value]/50.0)+0.5);
     self.playerWager.hidden = NO;
     [self.playerWager setText:[NSString stringWithFormat:@"%li", newWagerValue]];
-    NSLog(@"Changed the value: %f", [sender value]);
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)placeWager:(id)sender {
     NSInteger wagerValue = [self.playerWager.text intValue];
     [self.myViewController setDailyDoubleWager:wagerValue];
     [self dismissViewControllerAnimated:NO completion:^{
         //
     }];
 }
+
+
 
 
 

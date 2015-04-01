@@ -141,8 +141,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-J1-y4e">
-                                <rect key="frame" x="180" y="553" width="241" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-J1-y4e">
+                                <rect key="frame" x="180" y="552" width="241" height="29"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="p0e-1x-4yA"/>
@@ -272,7 +272,7 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93M-4y-LDf">
-                                        <rect key="frame" x="397.5" y="16" width="54" height="23.5"/>
+                                        <rect key="frame" x="397" y="16" width="54" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
                                         <color key="textColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -443,7 +443,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yPE-07-An1" kind="show" id="hR9-cX-bUq"/>
+                                    <action selector="placeWager:" destination="Ozk-oP-bPL" eventType="touchUpInside" id="UVc-HQ-Q5b"/>
                                 </connections>
                             </button>
                         </subviews>
