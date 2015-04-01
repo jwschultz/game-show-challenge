@@ -131,6 +131,8 @@
 		AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF89A0F81AB3EDDA00138C66 /* ViewController.h */,
+				AF89A0F91AB3EDDA00138C66 /* ViewController.m */,
 				AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */,
 				AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */,
 				AFF00B821AC6CE0700101CFD /* NewGameViewController.h */,
@@ -164,13 +166,11 @@
 		AF89A0F01AB3EDDA00138C66 /* Game Show Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */,
+				AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */,
 				AFEFCDAB1AC549CA007EF1E4 /* Cells */,
 				AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */,
 				AFE64F041ABBC8D20070BCA9 /* Domain */,
-				AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */,
-				AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */,
-				AF89A0F81AB3EDDA00138C66 /* ViewController.h */,
-				AF89A0F91AB3EDDA00138C66 /* ViewController.m */,
 				AF89A0FB1AB3EDDA00138C66 /* Main.storyboard */,
 				AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */,
 				AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */,

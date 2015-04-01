@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface NewGameViewController : ViewController
+@interface NewGameViewController : UIViewController
 
 @end
