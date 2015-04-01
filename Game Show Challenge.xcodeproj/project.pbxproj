@@ -10,7 +10,7 @@
 		AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */; };
 		AF89A0F41AB3EDDA00138C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F31AB3EDDA00138C66 /* main.m */; };
 		AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */; };
-		AF89A0FA1AB3EDDA00138C66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F91AB3EDDA00138C66 /* ViewController.m */; };
+		AF89A0FA1AB3EDDA00138C66 /* GameShowScoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F91AB3EDDA00138C66 /* GameShowScoringViewController.m */; };
 		AF89A0FD1AB3EDDA00138C66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF89A0FB1AB3EDDA00138C66 /* Main.storyboard */; };
 		AF89A0FF1AB3EDDA00138C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */; };
 		AF89A1021AB3EDDA00138C66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */; };
@@ -57,8 +57,8 @@
 		AF89A0F31AB3EDDA00138C66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF89A0F51AB3EDDA00138C66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF89A0F81AB3EDDA00138C66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF89A0F91AB3EDDA00138C66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF89A0F81AB3EDDA00138C66 /* GameShowScoringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameShowScoringViewController.h; sourceTree = "<group>"; };
+		AF89A0F91AB3EDDA00138C66 /* GameShowScoringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameShowScoringViewController.m; sourceTree = "<group>"; };
 		AF89A0FC1AB3EDDA00138C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF89A1011AB3EDDA00138C66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF89A0F81AB3EDDA00138C66 /* ViewController.h */,
-				AF89A0F91AB3EDDA00138C66 /* ViewController.m */,
+				AF89A0F81AB3EDDA00138C66 /* GameShowScoringViewController.h */,
+				AF89A0F91AB3EDDA00138C66 /* GameShowScoringViewController.m */,
 				AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */,
 				AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */,
 				AFF00B821AC6CE0700101CFD /* NewGameViewController.h */,
@@ -366,7 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD4950B1AC30E770082F4F7 /* DejalActivityView.m in Sources */,
-				AF89A0FA1AB3EDDA00138C66 /* ViewController.m in Sources */,
+				AF89A0FA1AB3EDDA00138C66 /* GameShowScoringViewController.m in Sources */,
 				AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */,
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
 				AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */,

@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="-1448" y="2392"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Show Scoring View Controller-->
         <scene sceneID="aSo-A6-Z3g">
             <objects>
-                <viewController id="yPE-07-An1" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="yPE-07-An1" customClass="GameShowScoringViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="202-3P-yEi"/>
                         <viewControllerLayoutGuide type="bottom" id="B36-eU-FTd"/>
@@ -548,6 +548,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.062745101750000004" green="0.0078431377190000002" blue="0.44705882670000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="yPE-07-An1" kind="showDetail" id="65g-tj-pRg"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -563,6 +566,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hR9-cX-bUq"/>
+        <segue reference="65g-tj-pRg"/>
     </inferredMetricsTieBreakers>
 </document>

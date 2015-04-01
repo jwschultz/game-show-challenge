@@ -34,7 +34,7 @@ const static NSInteger ANOTHER_AIRDATE_TAG = 1;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    ViewController *viewController = [segue destinationViewController];
+    GameShowScoringViewController *viewController = [segue destinationViewController];
     UIButton *senderButton = (UIButton*)sender;
     
     viewController.jeopardyGame = [[GameShowGame alloc] init];

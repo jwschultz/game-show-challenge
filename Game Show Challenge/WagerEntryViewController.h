@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Friends of Hektor. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameShowScoringViewController.h"
 
 @interface WagerEntryViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *playerWager;
-@property (weak, nonatomic) ViewController *myViewController;
+@property (weak, nonatomic) GameShowScoringViewController *myViewController;
 
 @property (nonatomic) NSInteger playerScore;
 @property NSInteger gameRound;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Friends of Hektor. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameShowScoringViewController.h"
 
 @interface NewGameViewController : UIViewController
 

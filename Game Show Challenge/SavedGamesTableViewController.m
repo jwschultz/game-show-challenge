@@ -9,7 +9,7 @@
 #import "SavedGamesTableViewController.h"
 #import "SavedGameTableViewCell.h"
 #import "GameShowGame.h"
-#import "ViewController.h"
+#import "GameShowScoringViewController.h"
 #import <Parse/Parse.h>
 
 @interface SavedGamesTableViewController ()
@@ -100,17 +100,13 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    ViewController *viewController = [segue destinationViewController];
+    GameShowScoringViewController *viewController = [segue destinationViewController];
     UITableViewCell *selectedCell = (UITableViewCell*)sender;
     
     NSArray *savedGamesArray = self.savedGames;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:selectedCell];
     if (indexPath.section > 0 && [savedGamesArray count] > indexPath.row) {
         viewController.jeopardyGame = [savedGamesArray objectAtIndex:(indexPath.row)];
-    } else {
-        viewController.jeopardyGame = [[GameShowGame alloc] init];
     }
 }
 

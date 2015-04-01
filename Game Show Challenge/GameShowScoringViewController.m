@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Friends of Hektor. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameShowScoringViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GameShowGame.h"
 #import <Parse/Parse.h>
 #import "WagerEntryViewController.h"
 
-@interface ViewController ()
+@interface GameShowScoringViewController ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameRoundSelector;
 @property (weak, nonatomic) UIButton *selectedValue;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ViewController
+@implementation GameShowScoringViewController
 
 
 - (void)viewDidLoad {
@@ -173,7 +173,7 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ViewController *viewController = [segue destinationViewController];
+    GameShowScoringViewController *viewController = [segue destinationViewController];
     if ([viewController isKindOfClass:[WagerEntryViewController class]]) {
         WagerEntryViewController *wagerEntryViewController = (WagerEntryViewController*)viewController;
         wagerEntryViewController.playerScore = self.jeopardyGame.playerScore;

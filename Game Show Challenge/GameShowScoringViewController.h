@@ -10,7 +10,7 @@
 
 @class GameShowGame;
 
-@interface ViewController : UIViewController 
+@interface GameShowScoringViewController : UIViewController 
 
 @property (strong, nonatomic) GameShowGame *jeopardyGame;
 @property (weak, nonatomic) IBOutlet UITextField *playerScore;
