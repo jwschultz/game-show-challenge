@@ -31,6 +31,16 @@
 		AF9467E91AC2AE930079D321 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9467E81AC2AE930079D321 /* SystemConfiguration.framework */; };
 		AF9467EB1AC2AE9B0079D321 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9467EA1AC2AE9B0079D321 /* libz.dylib */; };
 		AF9467ED1AC2AEA30079D321 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9467EC1AC2AEA30079D321 /* libsqlite3.dylib */; };
+		AF9D4D7A1ACD490F008A0151 /* podium.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D791ACD490F008A0151 /* podium.png */; };
+		AF9D4D841ACD4E83008A0151 /* podium-29.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D7B1ACD4E83008A0151 /* podium-29.png */; };
+		AF9D4D851ACD4E83008A0151 /* podium-40.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D7C1ACD4E83008A0151 /* podium-40.png */; };
+		AF9D4D861ACD4E83008A0151 /* podium-58.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D7D1ACD4E83008A0151 /* podium-58.png */; };
+		AF9D4D871ACD4E83008A0151 /* podium-76.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D7E1ACD4E83008A0151 /* podium-76.png */; };
+		AF9D4D881ACD4E83008A0151 /* podium-80.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D7F1ACD4E83008A0151 /* podium-80.png */; };
+		AF9D4D891ACD4E83008A0151 /* podium-87.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D801ACD4E83008A0151 /* podium-87.png */; };
+		AF9D4D8A1ACD4E83008A0151 /* podium-120.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D811ACD4E83008A0151 /* podium-120.png */; };
+		AF9D4D8B1ACD4E83008A0151 /* podium-152.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D821ACD4E83008A0151 /* podium-152.png */; };
+		AF9D4D8C1ACD4E83008A0151 /* podium-180.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9D4D831ACD4E83008A0151 /* podium-180.png */; };
 		AFB9A7FE1AB91EC20035AB9C /* korinnabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */; };
 		AFD1CCE01ACA3F5100F5BD56 /* WagerEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD1CCDF1ACA3F5100F5BD56 /* WagerEntryViewController.m */; };
 		AFD4950B1AC30E770082F4F7 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD4950A1AC30E770082F4F7 /* DejalActivityView.m */; };
@@ -81,6 +91,16 @@
 		AF9467E81AC2AE930079D321 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AF9467EA1AC2AE9B0079D321 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AF9467EC1AC2AEA30079D321 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AF9D4D791ACD490F008A0151 /* podium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podium.png; sourceTree = "<group>"; };
+		AF9D4D7B1ACD4E83008A0151 /* podium-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-29.png"; sourceTree = "<group>"; };
+		AF9D4D7C1ACD4E83008A0151 /* podium-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-40.png"; sourceTree = "<group>"; };
+		AF9D4D7D1ACD4E83008A0151 /* podium-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-58.png"; sourceTree = "<group>"; };
+		AF9D4D7E1ACD4E83008A0151 /* podium-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-76.png"; sourceTree = "<group>"; };
+		AF9D4D7F1ACD4E83008A0151 /* podium-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-80.png"; sourceTree = "<group>"; };
+		AF9D4D801ACD4E83008A0151 /* podium-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-87.png"; sourceTree = "<group>"; };
+		AF9D4D811ACD4E83008A0151 /* podium-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-120.png"; sourceTree = "<group>"; };
+		AF9D4D821ACD4E83008A0151 /* podium-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-152.png"; sourceTree = "<group>"; };
+		AF9D4D831ACD4E83008A0151 /* podium-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "podium-180.png"; sourceTree = "<group>"; };
 		AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = korinnabold.ttf; sourceTree = "<group>"; };
 		AFD1CCDE1ACA3F5100F5BD56 /* WagerEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WagerEntryViewController.h; sourceTree = "<group>"; };
 		AFD1CCDF1ACA3F5100F5BD56 /* WagerEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WagerEntryViewController.m; sourceTree = "<group>"; };
@@ -182,6 +202,16 @@
 		AF89A0F11AB3EDDA00138C66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF9D4D7B1ACD4E83008A0151 /* podium-29.png */,
+				AF9D4D7C1ACD4E83008A0151 /* podium-40.png */,
+				AF9D4D7D1ACD4E83008A0151 /* podium-58.png */,
+				AF9D4D7E1ACD4E83008A0151 /* podium-76.png */,
+				AF9D4D7F1ACD4E83008A0151 /* podium-80.png */,
+				AF9D4D801ACD4E83008A0151 /* podium-87.png */,
+				AF9D4D811ACD4E83008A0151 /* podium-120.png */,
+				AF9D4D821ACD4E83008A0151 /* podium-152.png */,
+				AF9D4D831ACD4E83008A0151 /* podium-180.png */,
+				AF9D4D791ACD490F008A0151 /* podium.png */,
 				AFB9A7FD1AB91EC20035AB9C /* korinnabold.ttf */,
 				AF89A0F21AB3EDDA00138C66 /* Info.plist */,
 				AF89A0F31AB3EDDA00138C66 /* main.m */,
@@ -344,10 +374,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9D4D861ACD4E83008A0151 /* podium-58.png in Resources */,
+				AF9D4D841ACD4E83008A0151 /* podium-29.png in Resources */,
+				AF9D4D851ACD4E83008A0151 /* podium-40.png in Resources */,
+				AF9D4D891ACD4E83008A0151 /* podium-87.png in Resources */,
+				AF9D4D8B1ACD4E83008A0151 /* podium-152.png in Resources */,
+				AF9D4D871ACD4E83008A0151 /* podium-76.png in Resources */,
 				AF89A0FD1AB3EDDA00138C66 /* Main.storyboard in Resources */,
 				AF89A1021AB3EDDA00138C66 /* LaunchScreen.xib in Resources */,
+				AF9D4D7A1ACD490F008A0151 /* podium.png in Resources */,
+				AF9D4D881ACD4E83008A0151 /* podium-80.png in Resources */,
 				AFB9A7FE1AB91EC20035AB9C /* korinnabold.ttf in Resources */,
+				AF9D4D8C1ACD4E83008A0151 /* podium-180.png in Resources */,
 				AF89A0FF1AB3EDDA00138C66 /* Images.xcassets in Resources */,
+				AF9D4D8A1ACD4E83008A0151 /* podium-120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
