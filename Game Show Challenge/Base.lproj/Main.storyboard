@@ -18,6 +18,8 @@
             <string>KorinnaBold</string>
             <string>KorinnaBold</string>
             <string>KorinnaBold</string>
+            <string>KorinnaBold</string>
+            <string>KorinnaBold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -33,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Scoring a New Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-hQ-5iK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Scoring a New Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7k0-hQ-5iK">
                                 <rect key="frame" x="0.0" y="94" width="600" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ba9-8r-29P"/>
@@ -421,49 +423,58 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3bU-o5-flP">
                                 <rect key="frame" x="14" y="285" width="572" height="31"/>
+                                <color key="tintColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="changeWager:" destination="Ozk-oP-bPL" eventType="valueChanged" id="LSy-xa-rAU"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPx-oH-vLa">
-                                <rect key="frame" x="16" y="222" width="568" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="EYl-UA-8E5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Ozk-oP-bPL" id="ID8-fe-WEq"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKU-IN-vZG">
                                 <rect key="frame" x="0.0" y="439" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="maS-WQ-HyU"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="22"/>
+                                <color key="tintColor" red="0.11000409936109626" green="0.13819805313928146" blue="0.88446980714797974" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Place Wager">
+                                    <color key="titleColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="placeWager:" destination="Ozk-oP-bPL" eventType="touchUpInside" id="UVc-HQ-Q5b"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT7-7E-Ogg">
+                                <rect key="frame" x="0.0" y="45" width="600" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="WPY-9y-uYv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KorinnaBold" family="Korinna" pointSize="82"/>
+                                <color key="textColor" red="0.90980398654937744" green="0.7725490927696228" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.062745101749897003" green="0.0078431377187371254" blue="0.44705882668495178" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="3bU-o5-flP" firstAttribute="top" secondItem="GT7-7E-Ogg" secondAttribute="bottom" constant="120" id="2kV-ah-2ID"/>
                             <constraint firstItem="3bU-o5-flP" firstAttribute="trailing" secondItem="JJU-hW-Ic7" secondAttribute="trailingMargin" id="5wk-He-fSZ"/>
-                            <constraint firstItem="3bU-o5-flP" firstAttribute="top" secondItem="LPx-oH-vLa" secondAttribute="bottom" constant="33" id="AG7-Ic-oU7"/>
+                            <constraint firstItem="GT7-7E-Ogg" firstAttribute="leading" secondItem="JJU-hW-Ic7" secondAttribute="leading" id="Eld-1g-a4k"/>
                             <constraint firstItem="fKU-IN-vZG" firstAttribute="top" secondItem="3bU-o5-flP" secondAttribute="bottom" constant="124" id="FYl-93-APM"/>
                             <constraint firstItem="3bU-o5-flP" firstAttribute="leading" secondItem="JJU-hW-Ic7" secondAttribute="leadingMargin" id="VNN-b5-jzF"/>
                             <constraint firstAttribute="centerY" secondItem="3bU-o5-flP" secondAttribute="centerY" id="Vri-yc-SiZ"/>
                             <constraint firstAttribute="trailing" secondItem="fKU-IN-vZG" secondAttribute="trailing" id="fLj-OU-eOU"/>
-                            <constraint firstAttribute="trailing" secondItem="LPx-oH-vLa" secondAttribute="trailing" constant="16" id="gnS-Eu-6Yh"/>
-                            <constraint firstItem="LPx-oH-vLa" firstAttribute="leading" secondItem="JJU-hW-Ic7" secondAttribute="leading" constant="16" id="nQX-r0-fQZ"/>
+                            <constraint firstItem="GT7-7E-Ogg" firstAttribute="top" secondItem="JJU-hW-Ic7" secondAttribute="top" constant="84" id="jSl-8S-9rC"/>
+                            <constraint firstAttribute="trailing" secondItem="GT7-7E-Ogg" secondAttribute="trailing" id="oGM-9K-jJq"/>
                             <constraint firstItem="fKU-IN-vZG" firstAttribute="leading" secondItem="JJU-hW-Ic7" secondAttribute="leading" id="xAZ-kr-gPT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jSl-8S-9rC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="playerWager" destination="LPx-oH-vLa" id="RKb-dF-ePG"/>
+                        <outlet property="wagerDisplay" destination="GT7-7E-Ogg" id="eMO-iB-3Bp"/>
                         <outlet property="wagerSlider" destination="3bU-o5-flP" id="CiW-nH-T3Z"/>
                     </connections>
                 </viewController>
@@ -568,6 +579,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OUP-t0-sYe"/>
+        <segue reference="65g-tj-pRg"/>
     </inferredMetricsTieBreakers>
 </document>

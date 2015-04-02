@@ -10,7 +10,9 @@
 
 @interface WagerEntryViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *wagerDisplay;
 @property (weak, nonatomic) IBOutlet UISlider *wagerSlider;
+@property (nonatomic) NSInteger wagerAmount;
 
 
 @end
@@ -30,7 +32,8 @@
     [self.wagerSlider setMinimumValue:5];
     [self.wagerSlider setMaximumValue:[self calculateMaximumWager]];
     
-    self.playerWager.text = 0;
+    [self.wagerDisplay setText:@"$0"];
+    self.wagerAmount = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,16 +47,15 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)changeWager:(UISlider *)sender {
-    NSInteger newWagerValue = 50.0 * floor(([sender value]/50.0)+0.5);
-    self.playerWager.hidden = NO;
-    [self.playerWager setText:[NSString stringWithFormat:@"%li", newWagerValue]];
+    self.wagerAmount = 50.0 * floor(([sender value]/50.0)+0.5);
+    [self.wagerDisplay setText:[NSString stringWithFormat:@"$%li", self.wagerAmount]];
 }
+
 - (IBAction)placeWager:(id)sender {
-    NSInteger wagerValue = [self.playerWager.text intValue];
-    [self.myViewController setDailyDoubleWager:wagerValue];
+    [self.myViewController setDailyDoubleWager:self.wagerAmount];
     [self dismissViewControllerAnimated:NO completion:^{
         //
     }];
