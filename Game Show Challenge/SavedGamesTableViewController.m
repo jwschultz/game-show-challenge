@@ -38,7 +38,7 @@
                 GameShowGame *game = [[GameShowGame alloc] init];
                 game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
                 game.gameDescription = [gameObject objectForKey:@"gameDescription"];
-                //        [gameObject setValue:self.jeopardyGame.airDate forKey:@"airDate"];
+                game.gameType = [[gameObject objectForKey:@"gameType"] longValue];
                 game.airDate = [gameObject objectForKey:@"airDate"];
                 if (!game.airDate) {
                     game.airDate = [NSDate dateWithTimeIntervalSinceNow:0];

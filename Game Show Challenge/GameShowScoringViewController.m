@@ -157,6 +157,7 @@
         
         [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
         [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
+        [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.gameType] forKey:@"gameType"];
         [gameObject setValue:self.jeopardyGame.airDate forKey:@"airDate"];
         gameObject[@"user"] = user;
 
