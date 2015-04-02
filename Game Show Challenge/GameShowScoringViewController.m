@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameRoundSelector;
 @property (weak, nonatomic) UIButton *selectedValue;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *dailyDoubleCollection;
+@property (weak, nonatomic) IBOutlet UIButton *dailyDoubleButton;
 
 @end
 
@@ -59,7 +60,12 @@
 
 - (void)setDailyDoubleWager:(NSInteger)dailyDoubleWager {
     _dailyDoubleWager = dailyDoubleWager;
+    [self unsetNextValue];
     self.jeopardyGame.nextValue = dailyDoubleWager;
+    UIColor *borderColor = [UIColor colorWithRed:(16.0/255.0) green:(2.0/255.0) blue:(114.0/255.0) alpha:1.0];
+    [self.dailyDoubleButton.layer setBorderColor:[borderColor CGColor]];
+    CGFloat borderWidth = 5.0;
+    [self.dailyDoubleButton.layer setBorderWidth:borderWidth];
 }
 
 - (IBAction)setNextValue:(UIButton *)sender {
@@ -80,6 +86,10 @@
     for (UIButton *clueValue in self.clueValues) {
         [clueValue.layer setBorderColor:nil];
         [clueValue.layer setBorderWidth:0.0];
+    }
+    if (self.dailyDoubleButton) {
+        [self.dailyDoubleButton.layer setBorderColor:nil];
+        [self.dailyDoubleButton.layer setBorderWidth:0.0];
     }
     self.jeopardyGame.nextValue = 0;
 }

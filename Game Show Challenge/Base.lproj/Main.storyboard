@@ -117,6 +117,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="1TW-uc-aKu"/>
+                                <exclude reference="Kqy-mo-q7z"/>
                             </mask>
                         </variation>
                     </view>
@@ -388,6 +389,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="dailyDoubleButton" destination="1MJ-18-FfG" id="anQ-he-8ug"/>
                         <outlet property="gameRoundSelector" destination="2Zm-J1-y4e" id="dAt-G8-Je3"/>
                         <outlet property="playerScore" destination="lyW-gz-ew5" id="RrU-Mi-hIB"/>
                         <outletCollection property="clueValues" destination="xpm-35-UtG" id="Ugm-SQ-7dH"/>
@@ -566,6 +568,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="65g-tj-pRg"/>
+        <segue reference="OUP-t0-sYe"/>
     </inferredMetricsTieBreakers>
 </document>
