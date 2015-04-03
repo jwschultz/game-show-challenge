@@ -74,7 +74,7 @@
         self.selectedValue = nil;
     } else {
         self.selectedValue = sender;
-        self.jeopardyGame.nextValue = [sender.titleLabel.text intValue];
+        self.jeopardyGame.nextValue = sender.tag;
         UIColor *borderColor = [UIColor colorWithRed:(231.0/255.0) green:(196.0/255.0) blue:(90.0/255.0) alpha:1.0];
         [sender.layer setBorderColor:[borderColor CGColor]];
         CGFloat borderWidth = 5.0;
@@ -109,21 +109,19 @@
 - (IBAction)toggleJeopardyRound:(UISegmentedControl *)sender {
     [self unsetNextValue];
     self.selectedValue = nil;
+    NSInteger ( ^ retag )( NSInteger );
     
     if ([sender selectedSegmentIndex] == 0) {
-        for (UIButton *clueValue in self.clueValues) {
-            int oldValue = [clueValue.titleLabel.text intValue];
-            int newValue = oldValue / 2;
-            NSString *newValueText = [@(newValue) stringValue];
-            [clueValue setTitle:newValueText forState:UIControlStateNormal];
-        }
+        retag = ^(NSInteger number){ return number / 2; };
     } else {
-        for (UIButton *clueValue in self.clueValues) {
-            int oldValue = [clueValue.titleLabel.text intValue];
-            int newValue = oldValue * 2;
-            NSString *newValueText = [@(newValue) stringValue];
-            [clueValue setTitle:newValueText forState:UIControlStateNormal];
-        }
+        retag = ^(NSInteger number){ return number * 2; };
+    }
+    for (UIButton *clueValue in self.clueValues) {
+        NSInteger oldValue = clueValue.tag;
+        NSInteger newValue = retag(oldValue);
+        NSString *newValueText = [NSString stringWithFormat:@"$%li", newValue];
+        [clueValue setTitle:newValueText forState:UIControlStateNormal];
+        [clueValue setTag:newValue];
     }
 }
 
