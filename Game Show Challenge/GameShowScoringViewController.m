@@ -119,7 +119,7 @@
     for (UIButton *clueValue in self.clueValues) {
         NSInteger oldValue = clueValue.tag;
         NSInteger newValue = retag(oldValue);
-        NSString *newValueText = [NSString stringWithFormat:@"$%li", newValue];
+        NSString *newValueText = [NSString stringWithFormat:@"$%li", (long)newValue];
         [clueValue setTitle:newValueText forState:UIControlStateNormal];
         [clueValue setTag:newValue];
     }
@@ -187,7 +187,7 @@
         WagerEntryViewController *wagerEntryViewController = (WagerEntryViewController*)viewController;
         wagerEntryViewController.playerScore = self.jeopardyGame.playerScore;
         wagerEntryViewController.gameRound = self.gameRoundSelector.selectedSegmentIndex;
-        wagerEntryViewController.myViewController = self;
+        wagerEntryViewController.modalPresenterViewController = self;
     }
 }
 

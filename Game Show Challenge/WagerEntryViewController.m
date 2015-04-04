@@ -19,13 +19,6 @@
 
 @implementation WagerEntryViewController
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    NSLog(@"You entered %@",self.playerWager.text);
-    [self.playerWager resignFirstResponder];
-    return YES;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -51,11 +44,11 @@
 
 - (IBAction)changeWager:(UISlider *)sender {
     self.wagerAmount = 50.0 * floor(([sender value]/50.0)+0.5);
-    [self.wagerDisplay setText:[NSString stringWithFormat:@"$%li", self.wagerAmount]];
+    [self.wagerDisplay setText:[NSString stringWithFormat:@"$%li", (long)self.wagerAmount]];
 }
 
 - (IBAction)placeWager:(id)sender {
-    [self.myViewController setDailyDoubleWager:self.wagerAmount];
+    [self.modalPresenterViewController setDailyDoubleWager:self.wagerAmount];
     [self dismissViewControllerAnimated:NO completion:^{
         //
     }];

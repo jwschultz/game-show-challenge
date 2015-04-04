@@ -8,10 +8,9 @@
 
 #import "GameShowScoringViewController.h"
 
-@interface WagerEntryViewController : UIViewController <UITextFieldDelegate>
+@interface WagerEntryViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextField *playerWager;
-@property (weak, nonatomic) GameShowScoringViewController *myViewController;
+@property (weak, nonatomic) GameShowScoringViewController *modalPresenterViewController;
 
 @property (nonatomic) NSInteger playerScore;
 @property NSInteger gameRound;
