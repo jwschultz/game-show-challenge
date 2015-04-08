@@ -10,7 +10,7 @@
 #import "SavedGameTableViewCell.h"
 #import "GameShowGame.h"
 #import "GameShowScoringViewController.h"
-#import <Parse/Parse.h>
+#import "GameShowGameRepository.h"
 
 @interface SavedGamesTableViewController ()
 
@@ -28,30 +28,10 @@
         self.savedGames = [NSMutableArray arrayWithCapacity:50];
     }
     
-    PFUser *user = [PFUser currentUser];
-    PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
-    [query whereKey:@"user" equalTo:user];
-    if (user.objectId) {
-        [query findObjectsInBackgroundWithBlock:^(NSArray *gameShowGames, NSError *error) {
-            NSMutableArray *theGames = [NSMutableArray arrayWithCapacity:[gameShowGames count]];
-            for (PFObject *gameObject in gameShowGames) {
-                GameShowGame *game = [[GameShowGame alloc] init];
-                game.playerScore = [[gameObject objectForKey:@"playerScore"] longValue];
-                game.gameDescription = [gameObject objectForKey:@"gameDescription"];
-                game.gameType = [[gameObject objectForKey:@"gameType"] longValue];
-                game.airDate = [gameObject objectForKey:@"airDate"];
-                if (!game.airDate) {
-                    game.airDate = [NSDate dateWithTimeIntervalSinceNow:0];
-                }
-                game.parseObjectId = gameObject.objectId;
-                game.persisted = YES;
-                [theGames addObject:game];
-            }
-            self.savedGames = [NSArray arrayWithArray:theGames];
-            [self.tableView reloadData];
-        }];
-    }
-
+    [GameShowGameRepository findGamesForCurrentUserWithBlock:^(NSArray *gamesArray) {
+        self.savedGames = [NSArray arrayWithArray:gamesArray];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

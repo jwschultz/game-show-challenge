@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class PFObject;
 
 @interface GameShowGame : NSObject
 
@@ -21,5 +22,8 @@
 @property (strong, nonatomic) NSDictionary *pastValues;
 @property (strong, nonatomic) NSString *parseObjectId;
 @property (strong, nonatomic) NSDate *airDate;
+
+- (GameShowGame *)initWithObject:(PFObject*)pfObject;
+- (PFObject *)asPFObject;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1E27C21AD36FE2004BAADB /* GameShowGameRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */; };
 		AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */; };
 		AF89A0F41AB3EDDA00138C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F31AB3EDDA00138C66 /* main.m */; };
 		AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1E27C01AD36FE2004BAADB /* GameShowGameRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShowGameRepository.h; sourceTree = "<group>"; };
+		AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameShowGameRepository.m; sourceTree = "<group>"; };
 		AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGamesTableViewController.h; sourceTree = "<group>"; };
 		AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGamesTableViewController.m; sourceTree = "<group>"; };
 		AF89A0EE1AB3EDDA00138C66 /* Game Show Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Show Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1E27BF1AD36EE1004BAADB /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				AF1E27C01AD36FE2004BAADB /* GameShowGameRepository.h */,
+				AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
 		AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 				AFEFCDAB1AC549CA007EF1E4 /* Cells */,
 				AF3EA54E1AC0C4E700E7ACA4 /* View Controllers */,
 				AFE64F041ABBC8D20070BCA9 /* Domain */,
+				AF1E27BF1AD36EE1004BAADB /* Persistence */,
 				AF89A0FB1AB3EDDA00138C66 /* Main.storyboard */,
 				AF89A0FE1AB3EDDA00138C66 /* Images.xcassets */,
 				AF89A1001AB3EDDA00138C66 /* LaunchScreen.xib */,
@@ -412,6 +425,7 @@
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
 				AFE64F071ABBC9120070BCA9 /* GameShowGame.m in Sources */,
 				AFF00B841AC6CE0700101CFD /* NewGameViewController.m in Sources */,
+				AF1E27C21AD36FE2004BAADB /* GameShowGameRepository.m in Sources */,
 				AFD1CCE01ACA3F5100F5BD56 /* WagerEntryViewController.m in Sources */,
 				AFEFCDAE1AC549FA007EF1E4 /* SavedGameTableViewCell.m in Sources */,
 				AF89A0F41AB3EDDA00138C66 /* main.m in Sources */,
