@@ -7,10 +7,9 @@
 //
 
 #import "GameShowScoringViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #import "GameShowGame.h"
-#import <Parse/Parse.h>
 #import "WagerEntryViewController.h"
+#import "GameShowGameRepository.h"
 
 @interface GameShowScoringViewController ()
 
@@ -138,48 +137,13 @@
     NSString *formattedString = [formatter stringFromNumber:[NSNumber numberWithInteger:newScore]];
     [self.playerScore setText:formattedString];
     self.jeopardyGame.gameDescription = formattedString;
-    [self saveGameToParse];
+    [GameShowGameRepository saveGame:self.jeopardyGame];
     if (newScore >= 0) {
         [self.playerScore setTextColor:[UIColor whiteColor]];
     } else {
         [self.playerScore setTextColor:[UIColor redColor]];
     }
 }
-
-- (void) saveGameToParse {
-    PFUser *user = [PFUser currentUser];
-    PFObject *gameObject;
-    
-    // if this game has previously been saved, it should have a parseObjectId. Update the object with that id.
-    if (self.jeopardyGame.persisted) {
-        if (self.jeopardyGame != nil && self.jeopardyGame.parseObjectId != nil) {
-            PFQuery *query = [PFQuery queryWithClassName:@"GameShowGame"];
-            [query getObjectInBackgroundWithId:self.jeopardyGame.parseObjectId block:^(PFObject *gameObject, NSError *error) {
-                [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
-                [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
-                [gameObject saveInBackground];
-            }];
-        }
-    } else {
-        gameObject = [PFObject objectWithClassName:@"GameShowGame"];
-        
-        [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.playerScore] forKey:@"playerScore"];
-        [gameObject setValue:self.jeopardyGame.gameDescription forKey:@"gameDescription"];
-        [gameObject setValue:[NSNumber numberWithLong:self.jeopardyGame.gameType] forKey:@"gameType"];
-        [gameObject setValue:self.jeopardyGame.airDate forKey:@"airDate"];
-        gameObject[@"user"] = user;
-
-        [gameObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (succeeded) {
-                self.jeopardyGame.parseObjectId = gameObject.objectId;
-            } else {
-                NSLog(@"There was an error: %@", error);
-            }
-        }];
-        self.jeopardyGame.persisted = YES; // track the fact that we're trying to save this
-    }
-}
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     GameShowScoringViewController *viewController = [segue destinationViewController];
