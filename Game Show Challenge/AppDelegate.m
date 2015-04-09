@@ -21,6 +21,9 @@
     [Parse setApplicationId:@"w5RAxEGiVabFqloDlv1fJZoPmibtu3Eb9MKsyFzh"
                   clientKey:@"4SQ72d8aEWhqCDLOy1xo0o3aPLWmBAhmlNhMLG9l"];
     
+    [PFTwitterUtils initializeWithConsumerKey:@"TuvoxiZ0Umh00Xovjq3BjGWyF"
+                               consumerSecret:@"1RQ9iYpjZtbQ86E4ZfmL4NdjPNPRnKWVO18p7kG58hx9StDkEx"];
+    
     [PFUser enableAutomaticUser];
     [[PFUser currentUser] saveInBackground];
     

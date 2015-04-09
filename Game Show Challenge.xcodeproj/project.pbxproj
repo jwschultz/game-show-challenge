@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1D7D461AD6152000ECB4C8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1D7D451AD6152000ECB4C8 /* Social.framework */; };
+		AF1D7D481AD6152900ECB4C8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1D7D471AD6152900ECB4C8 /* Accounts.framework */; };
 		AF1E27C21AD36FE2004BAADB /* GameShowGameRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */; };
 		AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */; };
 		AF89A0F41AB3EDDA00138C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F31AB3EDDA00138C66 /* main.m */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1D7D451AD6152000ECB4C8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AF1D7D471AD6152900ECB4C8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		AF1E27C01AD36FE2004BAADB /* GameShowGameRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameShowGameRepository.h; sourceTree = "<group>"; };
 		AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameShowGameRepository.m; sourceTree = "<group>"; };
 		AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGamesTableViewController.h; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1D7D481AD6152900ECB4C8 /* Accounts.framework in Frameworks */,
+				AF1D7D461AD6152000ECB4C8 /* Social.framework in Frameworks */,
 				AF9467ED1AC2AEA30079D321 /* libsqlite3.dylib in Frameworks */,
 				AF9467EB1AC2AE9B0079D321 /* libz.dylib in Frameworks */,
 				AF9467E91AC2AE930079D321 /* SystemConfiguration.framework in Frameworks */,
@@ -260,6 +266,8 @@
 		AF9467CD1AC2ADDE0079D321 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF1D7D471AD6152900ECB4C8 /* Accounts.framework */,
+				AF1D7D451AD6152000ECB4C8 /* Social.framework */,
 				AF9467EC1AC2AEA30079D321 /* libsqlite3.dylib */,
 				AF9467EA1AC2AE9B0079D321 /* libz.dylib */,
 				AF9467E81AC2AE930079D321 /* SystemConfiguration.framework */,
