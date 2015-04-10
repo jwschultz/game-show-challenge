@@ -11,6 +11,7 @@
 		AF1D7D481AD6152900ECB4C8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1D7D471AD6152900ECB4C8 /* Accounts.framework */; };
 		AF1E27C21AD36FE2004BAADB /* GameShowGameRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */; };
 		AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */; };
+		AF7A35421AD770400078EB7F /* UserAccountSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A35411AD770400078EB7F /* UserAccountSelectionViewController.m */; };
 		AF89A0F41AB3EDDA00138C66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F31AB3EDDA00138C66 /* main.m */; };
 		AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F61AB3EDDA00138C66 /* AppDelegate.m */; };
 		AF89A0FA1AB3EDDA00138C66 /* GameShowScoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89A0F91AB3EDDA00138C66 /* GameShowScoringViewController.m */; };
@@ -69,6 +70,8 @@
 		AF1E27C11AD36FE2004BAADB /* GameShowGameRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameShowGameRepository.m; sourceTree = "<group>"; };
 		AF3EA54F1AC0C59800E7ACA4 /* SavedGamesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGamesTableViewController.h; sourceTree = "<group>"; };
 		AF3EA5501AC0C59800E7ACA4 /* SavedGamesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGamesTableViewController.m; sourceTree = "<group>"; };
+		AF7A35401AD770400078EB7F /* UserAccountSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountSelectionViewController.h; sourceTree = "<group>"; };
+		AF7A35411AD770400078EB7F /* UserAccountSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountSelectionViewController.m; sourceTree = "<group>"; };
 		AF89A0EE1AB3EDDA00138C66 /* Game Show Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Show Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF89A0F21AB3EDDA00138C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF89A0F31AB3EDDA00138C66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				AFF00B831AC6CE0700101CFD /* NewGameViewController.m */,
 				AFD1CCDE1ACA3F5100F5BD56 /* WagerEntryViewController.h */,
 				AFD1CCDF1ACA3F5100F5BD56 /* WagerEntryViewController.m */,
+				AF7A35401AD770400078EB7F /* UserAccountSelectionViewController.h */,
+				AF7A35411AD770400078EB7F /* UserAccountSelectionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD4950B1AC30E770082F4F7 /* DejalActivityView.m in Sources */,
+				AF7A35421AD770400078EB7F /* UserAccountSelectionViewController.m in Sources */,
 				AF89A0FA1AB3EDDA00138C66 /* GameShowScoringViewController.m in Sources */,
 				AF3EA5511AC0C59800E7ACA4 /* SavedGamesTableViewController.m in Sources */,
 				AF89A0F71AB3EDDA00138C66 /* AppDelegate.m in Sources */,
