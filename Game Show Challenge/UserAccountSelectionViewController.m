@@ -25,26 +25,24 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)signInToService:(UIButton *)sender {
-    PFUser *user = [PFUser currentUser];
+    PFUser *currentUser = [PFUser currentUser];
+    NSLog(@"%@", [currentUser objectForKey:@"authData"]);
     
-    if (![PFTwitterUtils isLinkedWithUser:user]) {
-        [PFTwitterUtils linkUser:user block:^(BOOL succeeded, NSError *error) {
-            if ([PFTwitterUtils isLinkedWithUser:user]) {
-                NSLog(@"Woohoo, user logged in with Twitter!");
-            }
-        }];
-    } else {
-        [PFTwitterUtils logInWithBlock:^(PFUser *user, NSError *error) {
-            if (!user) {
-                NSLog(@"Uh oh. The user cancelled the Twitter login.");
-                return;
-            } else if (user.isNew) {
-                NSLog(@"User signed up and logged in with Twitter!");
-            } else {
-                NSLog(@"User logged in with Twitter!");
-            }
-        }];
+    if ([PFTwitterUtils isLinkedWithUser:currentUser]) {
+        
     }
+    
+    [PFTwitterUtils linkUser:currentUser block:^(BOOL succeeded, NSError *error) {
+        NSLog(@"Succeeded = %i", succeeded);
+    }];
+}
+- (IBAction)signOutOfService:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    [PFTwitterUtils unlinkUserInBackground:user block:^(BOOL succeeded, NSError *error) {
+        if (!error && succeeded) {
+            NSLog(@"The user is no longer associated with their Twitter account.");
+        }
+    }];
 }
 
 /*
